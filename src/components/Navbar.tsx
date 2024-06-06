@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between z-50 w-full px-6 py-4 lg:px-10">
       <Link href="/" className="flex items-center gap-1">
-        <p className="text-[26px] font-extrabold text-white max-sm:text-[16px]">
+        <p className="text-[26px] font-extrabold text-blue-1 max-sm:text-[16px]">
           Anish Awasthi
         </p>
       </Link>
@@ -26,8 +26,8 @@ const Navbar = () => {
 
             return (
               <Link href={link.route} key={link.label}>
-                <p className={cn("text-[15px] font-extrabold text-white max-sm:hidden", {
-                  "text-blue-600": isActive
+                <p className={cn("text-[15px] text-white-1 max-sm:hidden", {
+                  "text-blue-1": isActive
                 })}>
                   {link.label}
                 </p>

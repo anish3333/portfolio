@@ -1,11 +1,13 @@
 import React from 'react'
+import SkillsCard from '../SkillCard'
+import { skillsSorted } from '@/constants'
 
 const Skills = () => {
   return (
     <section>
-      <p className='text-3xl font-semibold h-screen w-full bg-pink-300'>
-        Skills
-      </p>
+      <div className='text-xl text-white font-semibold h-full w-full bg-divink-300'>
+        <SkillsCard skills={skillsSorted}/>
+      </div>
     </section>
   )
 }

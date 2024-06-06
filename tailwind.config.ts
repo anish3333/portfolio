@@ -18,6 +18,14 @@ const config = {
       },
     },
     extend: {
+      colors:{
+        blue:{
+          1: '#83B4FF'
+        },
+        white:{
+          1: '#FDFFE2'
+        }
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

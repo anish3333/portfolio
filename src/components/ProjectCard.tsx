@@ -11,7 +11,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="relative p-6 bg-[#5A72A0]  rounded-lg ">
-      <div className="space-y-3">
+      <div className="flex flex-col gap-3 space-y-3">
         <h5 className="text-2xl font-bold tracking-tight  text-white-1">
           {project.companyName}
         </h5>
@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <Link href={`/projects/${project.id}`}>
-          <Button variant={"default"} className="mt-3 bg-[#1A2130] text-white-1">
+          <Button variant={"default"} className=" bg-[#1A2130] text-white-1">
             Read More
             <Icons.chevronRight className="w-4 ml-1" />
           </Button>

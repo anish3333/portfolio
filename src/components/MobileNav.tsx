@@ -33,14 +33,14 @@ const MobileNav = () => {
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <div className="flex justify-end p-4">
               <SheetClose asChild>
-                <button className="text-white">
+                <button className="text-white-1">
                   <p className="text-xl">𝘅</p>
                 </button>
               </SheetClose>
             </div>
 
             <SheetClose asChild>
-              <section className="flex flex-col h-full gap-6 pt-10 text-white">
+              <section className="flex flex-col h-full gap-6 pt-10 text-white-1">
                 {navbarLinks.map((link) => {
                   const isActive =
                     link.route === pathName ||

@@ -9,7 +9,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <Navbar />
       </nav>
       <main className="flex-grow px-6 lg:px-10">{children}</main>
-      <footer>
+      <footer className="mt-36 mx-2 mb-7">
         <Footer/>
       </footer>
     </div>

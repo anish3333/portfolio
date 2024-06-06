@@ -1,9 +1,12 @@
+"use client";
+
+import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
 import SkillsCard from "@/components/SkillCard";
 import Contact from "@/components/pages/contact";
 import Project from "@/components/pages/projects";
 import { Button } from "@/components/ui/button";
-import { frontPageSkills} from "@/constants";
+import { frontPageSkills } from "@/constants";
 import Link from "next/link";
 import React from "react";
 
@@ -15,7 +18,7 @@ const RootPage = () => {
           <Hero />
         </div>
         <div className="text-xl text-white-1 font-semibold h-full w-full">
-          <div className=" flex justify-center text-5xl mb-7 font-bold ">
+          <div className=" flex justify-center text-4xl mb-7 font-bold ">
             Skills
           </div>
           <SkillsCard skills={frontPageSkills} />
@@ -32,7 +35,7 @@ const RootPage = () => {
         </div>
 
         <div>
-          <div className=" text-center text-5xl mb-7 font-bold text-white-1">
+          <div className=" text-center text-4xl mb-7 font-bold text-white-1">
             Featured Projects
           </div>
           <Project />
@@ -48,9 +51,22 @@ const RootPage = () => {
           </div>
         </div>
 
-
         <div>
-          <Contact />
+          <div className=" text-center text-4xl mb-7 font-bold text-white-1">
+            Contact Me
+            <p className="text-sm font-normal mt-3 mb-10 text-gray-300">
+              Please contact me directly at{" "}
+              <a
+                href="anishawasthi16@gmail.com"
+                target="_bank"
+                className="underline"
+              >
+                anishawasthi16@gmail.com
+              </a>{" "}
+              or through this form.
+            </p>
+          </div>
+          <ContactForm />
         </div>
       </div>
     </>

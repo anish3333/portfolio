@@ -32,28 +32,30 @@ const Hero = () => {
           <div>
             <Button
               asChild
-              className="text-xl font-medium px-6 py-6 rounded-sm bg-white-1 text-black"
+              className="text-xl font-medium px-6 py-6 rounded-sm bg-white-1 text-black hover:bg-white-1 transition duration-300 ease-in-out"
             >
-              <Link href="https://github.com/anish3333" target="_blank">
+              <a href="https://github.com/anish3333" target="_blank" className="hover:invert ">
                 <Image
                   src="/icons/github.svg"
                   alt="github icon"
                   width={19}
                   height={19}
+                  // className="hover:invert"
                 />
                 &nbsp;
                 <p>GitHub</p>
-              </Link>
+              </a>
             </Button>
           </div>
           <div>
             <Button
               asChild
-              className="text-xl font-medium px-8 py-6 text-white-1 rounded-sm bg-[#5A72A0] hover:bg-white-1 hover:text-[#1A2130]"
+              className="text-xl font-medium px-8 py-6 text-white-1 rounded-sm bg-[#83B4FF] hover:bg-white-1 hover:text-[#1A2130]"
             >
               <Link href="/pdfs/resume.pdf" target="_blank">
                 <p className="drop-shadow-lg">Resume</p>
               </Link>
+              
             </Button>
           </div>
         </div>

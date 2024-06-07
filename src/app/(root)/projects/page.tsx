@@ -14,7 +14,7 @@ const page = () => {
       <div className=" text-white-1 font-semibold h-full w-full">
         <div className="mx-auto grid sm:grid-cols-2 md:max-w-[64rem] lg:grid-cols-3 gap-5  h-full w-full ">
           {Projects.map((exp) => {
-            return <ProjectCard project={exp} />;
+            return <ProjectCard key={exp.id} project={exp} />;
           })}
         </div>
       </div>

@@ -21,7 +21,7 @@ const RootPage = () => {
           </div>
           <SkillsCard skills={frontPageSkills} />
           <div className="flex mt-5 justify-center">
-          <ViewAllButton href="/skills" />
+            <ViewAllButton href="/skills" />
           </div>
         </div>
 
@@ -31,8 +31,8 @@ const RootPage = () => {
           </div>
           <section>
             <div className="mx-auto grid sm:grid-cols-2 md:max-w-[64rem] lg:grid-cols-3 gap-5  h-full w-full ">
-              {featuredProjects.map((exp) => {
-                return <ProjectCard project={exp} />;
+              {featuredProjects.map((p) => {
+                return <ProjectCard key={p.id} project={p} />;
               })}
             </div>
           </section>

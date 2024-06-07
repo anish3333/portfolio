@@ -12,8 +12,8 @@ const Footer = () => {
       <div className="flex flex-wrap gap-4 justify-center">
         {SocialLinks.map((s) => {
           return (
-
             <a
+              key={s.name}
               target="_blank"
               href={s.link}
             >

@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row-reverse md:justify-between py-8 md:py-0  text-white-1 min-h-full mt-4">
       <div className="flex max-w-lg mb-8 md:mb-0 md:p-4 justify-center">
-        <img
+        <Image
           src="/images/anish.png"
           alt="Anish"
           className="w-48 h-48 md:w-80 md:h-80 rounded-full object-cover"
@@ -22,7 +22,7 @@ const Hero = () => {
             <br />
           </h1>
           <p className="text-md leading-relaxed mb-8">
-            I'm Anish Awasthi, a passionate Web Developer, currently in my
+            I&apos;m Anish Awasthi, a passionate Web Developer, currently in my
             second year of computer Engineering and I Love creating impactful
             digital solutions.Currently, I am expanding my skill set to include machine learning
             to create smarter and more intuitive applications.

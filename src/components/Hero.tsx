@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { Icons } from "./Icons";
 
 const Hero = () => {
   return (
@@ -62,7 +63,7 @@ const Hero = () => {
 
         <div className="flex items-center pt-5">
           <span className="text-lg">SCROLL FOR MORE</span>
-          <span className="text-2xl mt-2 ml-2 animate-bounce">↓</span>
+          <span className="text-2xl mt-2 ml-2 animate-bounce"><Icons.chevronDown className="w-5 ml-1" /></span>
         </div>
       </div>
     </div>

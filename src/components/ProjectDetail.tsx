@@ -1,35 +1,22 @@
 import React from "react";
 import Link from "next/link";
-
-interface PageInfo {
-  title: string;
-  description: string;
-  imgArr: string[];
-}
-
-interface Project {
-  id: string;
-  category: string[];
-  shortDescription: string;
-  websiteLink: string;
-  techStack: string[];
-  startDate: Date;
-  endDate: Date;
-  pagesInfoArr: PageInfo[];
-}
+import { ProjectInterface } from "@/constants";
+import DisplayProjectCategory from "./DisplayProjectCategory";
 
 const ProjectDetail = ({
   id,
   category,
   shortDescription,
   websiteLink,
+  githubLink,
   techStack,
   startDate,
   endDate,
+  descriptionDetails = { paragraphs: [], bullets: [] },
   pagesInfoArr,
-}: Project) => {
+}: ProjectInterface) => {
   return (
-    <div className="min-h-scree mt-5 text-white-1">
+    <div className="min-h-screen mt-5 text-white-1">
       <div className="container mx-auto">
         <Link href="/projects">
           <div className="text-blue-1 mb-5 inline-block hover:underline">
@@ -46,8 +33,7 @@ const ProjectDetail = ({
             </div>
           </div>
           <div className="mb-4">
-            <span className="font-semibold">Categories:</span>{" "}
-            {category.join(", ")}
+            <DisplayProjectCategory category={category}/>
           </div>
           <div className="mb-4">
             <a
@@ -58,15 +44,33 @@ const ProjectDetail = ({
             >
               Visit Website
             </a>
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4 text-blue-400 underline hover:text-blue-300"
+              >
+                View GitHub Repo
+              </a>
+            )}
           </div>
           <div className="mb-4">
-            <span className="font-semibold">Tech Stack:</span>{" "}
-            {techStack.join(", ")}
+            <span className="font-semibold">Tech Stack:</span> {techStack.join(", ")}
           </div>
           <div className="mb-6">
-            <span className="font-semibold">Duration:</span>{" "}
-            {startDate.toDateString()} to{" "}
-            {endDate.toDateString()}
+            <span className="font-semibold">Duration:</span> 
+            {startDate?.toDateString()} to {endDate?.toDateString()}
+          </div>
+          <div className="mb-6">
+            {descriptionDetails.paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-gray-300 mb-4">{paragraph}</p>
+            ))}
+            <ul className="list-disc list-inside text-gray-300">
+              {descriptionDetails.bullets.map((bullet, index) => (
+                <li key={index}>{bullet}</li>
+              ))}
+            </ul>
           </div>
           {pagesInfoArr.map((page, index) => (
             <div key={index} className="mb-10">

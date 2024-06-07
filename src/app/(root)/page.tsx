@@ -2,11 +2,11 @@
 
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
+import ProjectCard from "@/components/ProjectCard";
 import SkillsCard from "@/components/SkillCard";
-import Contact from "@/components/pages/contact";
-import Project from "@/components/pages/projects";
+import ViewAllButton from "@/components/ViewAllButton";
 import { Button } from "@/components/ui/button";
-import { frontPageSkills } from "@/constants";
+import { featuredProjects, frontPageSkills } from "@/constants";
 import Link from "next/link";
 import React from "react";
 
@@ -23,14 +23,7 @@ const RootPage = () => {
           </div>
           <SkillsCard skills={frontPageSkills} />
           <div className="flex mt-5 justify-center">
-            <Button
-              asChild
-              className="font-medium px-4 py-4 bg-[#1A2130] hover:bg-white-1 hover:text-black rounded-lg border border-white-1 text-white-1"
-            >
-              <Link href="/skills">
-                <p>View All</p>
-              </Link>
-            </Button>
+          <ViewAllButton href="/skills" />
           </div>
         </div>
 
@@ -38,16 +31,15 @@ const RootPage = () => {
           <div className=" text-center text-4xl mb-7 font-bold text-white-1">
             Featured Projects
           </div>
-          <Project />
+          <section>
+            <div className="mx-auto grid sm:grid-cols-2 md:max-w-[64rem] lg:grid-cols-3 gap-5  h-full w-full ">
+              {featuredProjects.map((exp) => {
+                return <ProjectCard project={exp} />;
+              })}
+            </div>
+          </section>
           <div className="flex mt-5 justify-center">
-            <Button
-              asChild
-              className="font-medium px-4 py-4 bg-[#1A2130] hover:bg-white-1 hover:text-black rounded-lg border border-white-1 text-white-1"
-            >
-              <Link href="/projects">
-                <p>View All</p>
-              </Link>
-            </Button>
+            <ViewAllButton href="/projects" />
           </div>
         </div>
 
@@ -56,11 +48,7 @@ const RootPage = () => {
             Contact Me
             <p className="text-sm font-normal mt-3 mb-10 text-gray-300">
               Please contact me directly at{" "}
-              <a
-                href="anishawasthi16@gmail.com"
-                target="_bank"
-                className="underline"
-              >
+              <a href="mailto:anishawasthi16@gmail.com" className="underline">
                 anishawasthi16@gmail.com
               </a>{" "}
               or through this form.

@@ -1,5 +1,4 @@
 import SkillsCard from "@/components/SkillCard";
-import Skills from "@/components/pages/skills";
 import { skillsSorted } from "@/constants";
 import React from "react";
 

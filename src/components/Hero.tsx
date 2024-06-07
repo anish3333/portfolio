@@ -22,26 +22,28 @@ const Hero = () => {
             <br />
           </h1>
           <p className="text-md leading-relaxed mb-8">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries.
+            I'm Anish Awasthi, a passionate Web Developer, currently in my
+            second year of computer Engineering and I Love creating impactful
+            digital solutions.Currently, I am expanding my skill set to include machine learning
+            to create smarter and more intuitive applications.
           </p>
-        </div>  
+        </div>
         <div className="flex max-sm:flex-col items-center justify-center gap-8 max-sm:gap-6">
           <div>
             <Button
               asChild
               className="text-xl font-medium px-6 py-6 rounded-sm bg-white-1 text-black hover:bg-white-1 transition duration-300 ease-in-out"
             >
-              <a href="https://github.com/anish3333" target="_blank" className="hover:invert ">
+              <a
+                href="https://github.com/anish3333"
+                target="_blank"
+                className="hover:invert "
+              >
                 <Image
                   src="/icons/github.svg"
                   alt="github icon"
                   width={19}
                   height={19}
-                  // className="hover:invert"
                 />
                 &nbsp;
                 <p>GitHub</p>
@@ -56,14 +58,15 @@ const Hero = () => {
               <Link href="/pdfs/resume.pdf" target="_blank">
                 <p className="drop-shadow-lg">Resume</p>
               </Link>
-              
             </Button>
           </div>
         </div>
 
         <div className="flex items-center pt-5">
           <span className="text-lg">SCROLL FOR MORE</span>
-          <span className="text-2xl mt-2 ml-2 animate-bounce"><Icons.chevronDown className="w-5 ml-1" /></span>
+          <span className="text-2xl mt-2 ml-2 animate-bounce">
+            <Icons.chevronDown className="w-5 ml-1" />
+          </span>
         </div>
       </div>
     </div>

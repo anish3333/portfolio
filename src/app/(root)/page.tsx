@@ -5,9 +5,7 @@ import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsCard from "@/components/SkillCard";
 import ViewAllButton from "@/components/ViewAllButton";
-import { Button } from "@/components/ui/button";
 import { featuredProjects, frontPageSkills } from "@/constants";
-import Link from "next/link";
 import React from "react";
 
 const RootPage = () => {

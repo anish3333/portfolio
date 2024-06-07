@@ -1,6 +1,11 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
 import ProjectDetail from '@/components/ProjectDetail';
 import { Projects } from '@/constants';
+
+
+export function generateStaticParams() {
+  return [Projects.map(p => {id : p.id})];
+}
+ 
 
 const ProjectPage = ({ params: {id} }: {params : {id : string}}) => {
   const project = Projects.find((p) => p.id === id);

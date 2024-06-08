@@ -1,4 +1,4 @@
-import { ProjectInterface, ValidCategory } from "@/constants";
+import { ProjectInterface, ValidCategory } from "@/constants/projects";
 import React from "react";
 
 interface DisplayProjectCategoryProps {

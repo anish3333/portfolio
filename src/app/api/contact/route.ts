@@ -23,8 +23,7 @@ export async function POST(req: Request) {
       [fieldIdMessage]: message,
       [fieldIdLastName]: lastName,
     }).toString();
-    console.log(formData);
-    console.log(formLink);
+    
     const res = await fetch(`${formLink}/formResponse`, {
       method: 'POST',
       headers: {

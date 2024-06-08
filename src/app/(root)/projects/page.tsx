@@ -1,6 +1,6 @@
 
 import ProjectCard from "@/components/ProjectCard";
-import { Projects } from "@/constants";
+import { Projects } from "@/constants/projects";
 import React from "react";
 
 

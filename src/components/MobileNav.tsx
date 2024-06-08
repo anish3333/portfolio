@@ -28,17 +28,10 @@ const MobileNav = () => {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="border-none bg-black bg-opacity-65"
+          className="border-none bg-[#1A2130] bg-opacity-65"
+          onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
-            <div className="flex justify-end p-4">
-              <SheetClose asChild>
-                <button className="text-white-1">
-                  <p className="text-xl">𝘅</p>
-                </button>
-              </SheetClose>
-            </div>
-
             <SheetClose asChild>
               <section className="flex flex-col h-full gap-6 pt-10 text-white-1">
                 {navbarLinks.map((link) => {

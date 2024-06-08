@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/Icons";
-import { ProjectInterface } from "@/constants";
+import { ProjectInterface } from "@/constants/projects";
 import DisplayProjectCategory from "./DisplayProjectCategory";
 
 interface ProjectCardProps {

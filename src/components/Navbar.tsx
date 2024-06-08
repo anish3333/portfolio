@@ -12,8 +12,8 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between z-50 w-full px-6 py-4 lg:px-10">
       <Link href="/" className="flex items-center gap-1">
-        <p className="text-[26px] font-bold text-blue-1 max-sm:text-[16px]">
-          Anish Awasthi
+        <p className="text-[26px] font-bold text-blue-1 max-sm:text-[16px] ">
+          anish awasthi
         </p>
       </Link>
       <div className="flex items-center">

@@ -1,5 +1,5 @@
 import ProjectDetail from '@/components/ProjectDetail';
-import { Projects } from '@/constants';
+import { Projects } from '@/constants/projects';
 
 
 export function generateStaticParams() {

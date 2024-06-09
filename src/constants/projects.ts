@@ -25,6 +25,11 @@ export type ValidSkills =
   | "Redux-Toolkit"
   | "React Router"
   | "Context API"
+  | "TypeScript"
+  | "GetStream"
+  | "Clerk"
+  | "shadcn"
+  | "react-hot-toast"
 
 export type ValidCategory =
   | "Full Stack"
@@ -129,67 +134,69 @@ export const Projects: ProjectInterface[] = [
     ]
   },
   {
-    "id": "zoom-clone-nextjs",
+    "id": "flash-flow",
     "category": ["Web Dev", "Full Stack"],
-    "shortDescription": "Developed a Zoom clone focusing on building full stack applications using Next.js.",
-    "websiteLink": "https://github.com/adrianhajdin/project_video_chat",
-    "githubLink": "https://github.com/adrianhajdin/project_video_chat",
+    "shortDescription": "An advanced video conferencing application that mirrors the functionality of Zoom, built using Next.js and modern web technologies.",
+    "websiteLink": "https://flash-flow.vercel.app",
+    "githubLink": "https://github.com/anish3333/FlashFlow",
     "techStack": [
       "Next.js",
-      "React",
-      "Node.js"
+      "TypeScript",
+      "GetStream",
+      "Clerk",
+      "Tailwind CSS",
+      "shadcn",
+      "react-hot-toast"
     ],
     "descriptionDetails": {
       "paragraphs": [
-        "This project is a comprehensive Zoom clone designed to teach full stack application development using Next.js.",
-        "The project covers Next.js for server-side rendering, WebRTC for real-time communication, and integration with Socket.io for real-time events."
+        "FlashFlow is a comprehensive video conferencing application designed to provide a seamless and secure experience for users.",
+        "Built with modern technologies, FlashFlow leverages Next.js for server-side rendering, TypeScript for enhanced development experience, and integrates GetStream for real-time communication.",
+        "Clerk is used for robust user authentication and management, while Tailwind CSS and shadcn ensure a visually appealing and responsive user interface.",
+        "Dynamic notifications are implemented using react-hot-toast, enhancing the user experience with informative and interactive notifications."
       ],
       "bullets": [
-        "Learned Next.js for server-side rendering",
-        "Integrated WebRTC for real-time video communication",
-        "Used Socket.io for real-time events",
-        "Implemented peer-to-peer connections with PeerJS",
-        "Styled components using Material-UI",
-        "Developed a full-stack application with Node.js and Express",
-        "Focused on production-grade application development"
+        "Real-time Video Conferencing powered by GetStream",
+        "Screen Sharing for better collaboration",
+        "Secure Authentication with Clerk",
+        "Modern and Responsive UI built with Tailwind CSS and shadcn",
+        "User-friendly Notifications using react-hot-toast",
+        "Effortless User Management features"
       ]
     },
     "pagesInfoArr": [
       {
-        "title": "Introduction to the Project",
-        "description": "An overview of the Zoom clone project, its features, and the technologies used.",
+        "title": "Landing Page",
+        "description": "An overview of FlashFlow, its features",
         "imgArr": [
-          "/experience/zoomClone/project_intro_1.webp",
-          "/experience/zoomClone/project_intro_2.webp"
+          "/images/projects/flash-flow/landing.png"
         ]
       },
       {
-        "title": "Real-Time Video Communication",
-        "description": "Detailed implementation of real-time video communication using WebRTC and PeerJS.",
+        "title": "Upcomign and Previous Meetings",
+        "description": "Detailed implementation of real-time video conferencing using GetStream.",
         "imgArr": [
-          "/experience/zoomClone/real_time_video_1.webp",
-          "/experience/zoomClone/real_time_video_2.webp"
+          "/images/projects/flash-flow/previous.png",
+          "/images/projects/flash-flow/upcoming.png"
         ]
       },
       {
-        "title": "Real-Time Events with Socket.io",
-        "description": "Setting up real-time events and communication using Socket.io for seamless user experience.",
+        "title": "Main Video Calling Interface",
+        "description": "Explanation of the authentication system implemented using Clerk.",
         "imgArr": [
-          "/experience/zoomClone/real_time_events_1.webp",
-          "/experience/zoomClone/real_time_events_2.webp"
+          "/images/projects/flash-flow/meeting.png",
+          "/images/projects/flash-flow/meeting2.png"
         ]
       },
       {
-        "title": "UI Components with Material-UI",
-        "description": "Using Material-UI to style components and ensure a consistent and responsive design.",
+        "title": "Video Recordings",
+        "description": "Insight into the responsive UI design using Tailwind CSS and shadcn.",
         "imgArr": [
-          "/experience/zoomClone/material_ui_1.webp"
+          "/images/projects/flash-flow/recordings.png",
         ]
       }
     ]
   }
-  
-  
 ];
 
 export const featuredProjects = Projects.slice(0, 3);

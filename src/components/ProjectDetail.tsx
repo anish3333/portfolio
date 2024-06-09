@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ProjectInterface } from "@/constants/projects";
 import DisplayProjectCategory from "./DisplayProjectCategory";
 import { Icons } from "./Icons";
 import Image from "next/image";
+import ImageModal from "./ImageModal";
 
 const ProjectDetail = ({
   id,
@@ -17,6 +20,17 @@ const ProjectDetail = ({
   descriptionDetails = { paragraphs: [], bullets: [] },
   pagesInfoArr,
 }: ProjectInterface) => {
+
+
+
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [image, setImage] = React.useState("");
+
+  const handleClick = (e: any) => {
+    setIsOpen(prev => !prev);
+    setImage(e.target.getAttribute("src"));
+  };
+
   return (
     <div className="min-h-screen mt-5 text-white-1">
       <div className="mx-auto md:max-w-[64rem] max-sm:px-2 px-4">
@@ -26,7 +40,7 @@ const ProjectDetail = ({
           </div>
         </Link>
 
-        <div className=" flex flex-col gap-10 rounded-lg shadow-lg">
+        <div className=" flex flex-col gap-10 rounded-lg">
 
           <div>
             <div className="flex gap-x-4 gap-y-1 items-center flex-wrap mb-3">
@@ -107,10 +121,11 @@ const ProjectDetail = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {page.imgArr.map((imgSrc, imgIndex) => (
                   <img
+                    onClick={handleClick}
                     key={imgIndex}
                     src={imgSrc}
                     alt={`${page.title} ${imgIndex + 1}`}
-                    className="rounded-lg shadow-lg w-full h-auto object-cover"
+                    className="rounded-lg shadow-gray-800 shadow-lg w-full h-full object-cover hover:cursor-pointer"
                   />
                 ))}
               </div>
@@ -118,6 +133,8 @@ const ProjectDetail = ({
           ))}
         </div>
       </div>
+
+      <ImageModal image={image} isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 };

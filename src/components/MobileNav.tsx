@@ -51,7 +51,6 @@ const MobileNav = () => {
                         )}
                       >
                         <Image
-                          className="filter invert"
                           src={link.imageURL}
                           alt={link.label}
                           width={20}

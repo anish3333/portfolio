@@ -25,13 +25,10 @@ const Hero = () => {
             <br />
           </h1>
           <p className="text-md leading-relaxed mb-8">
-            I&apos;m Anish Awasthi, a passionate Web Developer, currently in my
-            second year of Computer Engineering and I Love creating impactful
-            digital solutions. Currently, I am expanding my skill set to include machine learning
-            to create smarter and more intuitive applications.
+            I&apos;m Anish Awasthi, a Web Developer from Mumbai, India, currently pursuing my second year of Computer Engineering. I&apos;m passionate about creating digital solutions that make a real difference. Always eager to learn and grow, I&apos;m on a mission to craft impactful applications that leave a lasting impression.
           </p>
         </div>
-        <div className="flex max-sm:flex-col items-center justify-center gap-8 max-sm:gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-8 max-sm:gap-6">
           <div>
             <Button
               asChild

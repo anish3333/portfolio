@@ -15,20 +15,20 @@ import { cn } from "@/lib/utils";
 const MobileNav = () => {
   const pathName = usePathname();
   return (
-    <section className="w-full max-w-[264px]">
+    <section className="w-full max-w-[264px] shadow-xl">
       <Sheet>
         <SheetTrigger asChild>
           <Image
             src="/icons/hamburger.svg"
             alt="hamburger icon"
-            width={36}
-            height={36}
+            width={34}
+            height={34}
             className="cursor-pointer sm:hidden"
           />
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="border-none bg-[#1A2130] bg-opacity-65"
+          className="border-none bg-[#1A2130] bg-opacity-65 backdrop-blur-sm "
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
@@ -46,7 +46,7 @@ const MobileNav = () => {
                         className={cn(
                           "flex gap-4 items-center p-4 rounded-lg w-full max-w-60",
                           {
-                            "bg-blue-1": isActive,
+                            "bg-blue-1 shadow-md": isActive,
                           }
                         )}
                       >

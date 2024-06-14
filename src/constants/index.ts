@@ -17,7 +17,7 @@ export const navbarLinks = [
     imageURL: "/icons/project.svg",
   },
   {
-    label: "Contact Me",
+    label: "Contact",
     route: "/contact",
     imageURL: "/icons/contact.svg",
   },

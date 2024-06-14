@@ -36,10 +36,10 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="h-full w-full max-w-[30rem] mx-auto shadow-md rounded-lg "
+      className="h-full w-full max-w-[32rem] mx-auto shadow-md rounded-lg "
     >
-      <div className="flex gap-2">
-        <div className="mb-4">
+      <div className="flex gap-2 justify-between flex-grow flex-wrap">
+        <div className="mb-4 flex flex-col flex-grow">
           <label
             htmlFor="firstName"
             className="block text-white-1 text-sm font-medium mb-2"
@@ -47,16 +47,17 @@ const ContactForm = () => {
             First Name*
           </label>
           <input
+            placeholder="Enter your first name"
             required
             type="text"
             id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            className="w-full px-3 py-2 text-white-1 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-1"
+            className="w-full px-3 py-2 text-white-1 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-1 flex-grow"
           />
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 flex flex-col flex-grow">
           <label
             htmlFor="lastName"
             className="block text-white-1 text-sm font-medium mb-2"
@@ -65,6 +66,7 @@ const ContactForm = () => {
           </label>
           <input
             required
+            placeholder="Enter your last name"
             type="text"
             id="lastName"
             value={lastName}
@@ -82,6 +84,7 @@ const ContactForm = () => {
         </label>
         <input
           required
+          placeholder="Enter your email"
           type="email"
           id="email"
           value={email}
@@ -99,6 +102,7 @@ const ContactForm = () => {
         </label>
         <textarea
           id="message"
+          placeholder="Enter your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="w-full px-3 py-2 text-white-1 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-1"

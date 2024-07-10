@@ -40,6 +40,7 @@ export type ValidCategory =
   | "Mobile Dev"
   | "3D Modeling"
   | "MERN"
+  | "IN PROGRESS"
 
 
 
@@ -196,7 +197,69 @@ export const Projects: ProjectInterface[] = [
         ]
       }
     ]
+  },
+  {
+    "id": "video-sharing-website",
+    "category": ["Web Dev", "Full Stack", "IN PROGRESS"],
+    "shortDescription": "A video-sharing website clone inspired by YouTube, featuring functionalities such as video uploads, viewing, and user interactions.",
+    "websiteLink": "https://youtube-clone-mern-mu.vercel.app",
+    "githubLink": "https://github.com/anish3333/YoutubeClone-MERN",
+    "techStack": [
+      "React",
+      "Node.js",
+      "express.js",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "descriptionDetails": {
+      "paragraphs": [
+        "The YouTube Clone is a full-featured video-sharing application that mirrors the functionality of YouTube, providing users with a platform to upload, view, and interact with videos.",
+        "This project utilizes modern web technologies such as React for the front-end and Node.js with Express.js for the back-end, ensuring a robust and scalable architecture.",
+        "MongoDB is used as the database to store user information, videos, and other metadata, while Tailwind CSS ensures a responsive and aesthetically pleasing user interface.",
+        "The application includes features such as user authentication, video uploading, real-time comments, and video recommendations."
+      ],
+      "bullets": [
+        "Video Upload and Streaming",
+        "Real-time Comments and Interactions",
+        "User Authentication and Profile Management",
+        "Responsive UI with Tailwind CSS",
+        "Video Recommendations and Search Functionality",
+        "Robust Backend with Node.js and Express.js"
+      ]
+    },
+    "pagesInfoArr": [
+      {
+        "title": "Home Page",
+        "description": "Overview of the video sharing platform, featuring trending videos and recommendations. Users can easily browse through the latest and most popular videos.",
+        "imgArr": [
+          "/images/projects/video-sharing-website/home.png"
+        ]
+      },
+      {
+        "title": "Video Playback",
+        "description": "Detailed view of the video playback interface, including video player and comments section. Users can watch videos, like or dislike them, and leave comments to engage with the community.",
+        "imgArr": [
+          "/images/projects/video-sharing-website/video-playback.png"
+        ]
+      },
+      {
+        "title": "User Profile",
+        "description": "Explanation of the user profile management system. Users can manage their personal information, view their uploaded videos, and see their activity history. The profile page also allows users to customize their channel settings and appearance.",
+        "imgArr": [
+          "/images/projects/video-sharing-website/channel.png"
+        ]
+      },
+      {
+        "title": "Video Upload",
+        "description": "Insight into the video uploading interface and process. Users can upload new videos, add titles and descriptions, and select thumbnail images. The upload process ensures that videos are properly encoded and stored in the database for efficient streaming.",
+        "imgArr": [
+          "/images/projects/video-sharing-website/video-upload.png"
+        ]
+      }
+    ]
   }
+  
+  
 ];
 
 export const featuredProjects = Projects.slice(0, 3);

@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { SocialLinks } from "@/constants/social";
+
 const Footer = () => {
   return (
-    <div className="text-center flex flex-col justify-between text-sm text-gray-400 font-light">
+    <div className="text-center flex flex-col mx-auto justify-between text-sm text-gray-400 font-light">
       <div className="mb-1">
         © 2024 Anish Awasthi. All rights reserved.
       </div>
@@ -15,16 +16,16 @@ const Footer = () => {
               key={s.name}
               target="_blank"
               href={s.link}
+              className="transition-transform transform hover:scale-125"
             >
-            <div className="flex gap-1">
-              <Image src={s.icon} alt={s.name} width={17} height={17}/>
-              <p>{s.username}</p>
-            </div>
+              <div className="flex gap-2 items-center">
+                <Image src={s.icon} alt={s.name} width={20} height={20} />
+                {/* <p>{s.username}</p> */}
+              </div>
             </a>
           );
         })}
       </div>
-      
     </div>
   );
 };

@@ -168,14 +168,14 @@ export const Projects: ProjectInterface[] = [
     "pagesInfoArr": [
       {
         "title": "Landing Page",
-        "description": "An overview of FlashFlow, its features",
+        "description": "The landing page is the main entry point for the application, where users can sign in, create an account, or view their dashboard.",
         "imgArr": [
           "/images/projects/flash-flow/landing.png"
         ]
       },
       {
-        "title": "Upcomign and Previous Meetings",
-        "description": "Detailed implementation of real-time video conferencing using GetStream.",
+        "title": "Upcoming and Previous Meetings",
+        "description": "upcoming and previous meetings are displayed on the dashboard, and users can view the details of each meeting.",
         "imgArr": [
           "/images/projects/flash-flow/previous.png",
           "/images/projects/flash-flow/upcoming.png"
@@ -183,7 +183,7 @@ export const Projects: ProjectInterface[] = [
       },
       {
         "title": "Main Video Calling Interface",
-        "description": "Explanation of the authentication system implemented using Clerk.",
+        "description": "The main video calling interface is where the user can start a new meeting, join an existing meeting, and view the meeting details.",
         "imgArr": [
           "/images/projects/flash-flow/meeting.png",
           "/images/projects/flash-flow/meeting2.png"
@@ -191,7 +191,7 @@ export const Projects: ProjectInterface[] = [
       },
       {
         "title": "Video Recordings",
-        "description": "Insight into the responsive UI design using Tailwind CSS and shadcn.",
+        "description": "recorded videos are stored in the database and can be viewed by the user.",
         "imgArr": [
           "/images/projects/flash-flow/recordings.png",
         ]

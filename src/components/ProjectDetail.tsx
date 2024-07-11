@@ -5,9 +5,7 @@ import Link from "next/link";
 import { ProjectInterface } from "@/constants/projects";
 import DisplayProjectCategory from "./DisplayProjectCategory";
 import { Icons } from "./Icons";
-import Image from "next/image";
 import ImageModal from "./ImageModal";
-import { Github, GithubIcon } from "lucide-react";
 
 const ProjectDetail = ({
   id,
@@ -36,16 +34,23 @@ const ProjectDetail = ({
     <div className="min-h-screen mt-5 text-white-1">
       <div className="mx-auto md:max-w-[64rem] max-sm:px-2 px-4">
         <Link href="/projects">
-          <div className="text-blue-1 mb-5 inline-block hover:underline">
-            &larr; Back to Projects
-          </div>
+
+        <div className="flex items-center mb-5 ">
+          <span className="text-2xl hover:animate-spin mr-2">
+            <Icons.chevronLeft className="w-5" />
+          </span>
+          <span className="mr-2">
+            Back to Projects
+          </span>
+        </div>
+
         </Link>
 
         <div className=" flex flex-col gap-10 rounded-lg">
 
           <div>
             <div className="flex gap-x-4 gap-y-1 items-center flex-wrap mb-3">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize mb-2">
+              <h1 className="text-2xl sm:text-3xl text-blue-1 md:text-4xl font-bold capitalize mb-2">
                 {id.replace(/-/g, " ")}
               </h1>
               <div className="flex justify-center items-center gap-x-4 gap-y-1 flex-wrap">
@@ -81,7 +86,7 @@ const ProjectDetail = ({
           
 
           <div>
-            <div className="font-semibold mb-3">Tech Stack:</div>
+            <div className="font-semibold mb-3 text-blue-1">Tech Stack:</div>
             <div className="flex flex-wrap gap-2 text-sm font-semibold">
             {techStack.map((tech, index) => (
               <span className="rounded-md border border-white-1 text-white-1 px-3 py-1 text-sm" key={index}>
@@ -111,7 +116,7 @@ const ProjectDetail = ({
           </div>
           {pagesInfoArr.map((page, index) => (
             <div key={index} className="mb-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize mb-2">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize mb-2 text-blue-1">
                 {page.title}
               </h2>
               <p className="text-gray-300 mb-4">{page.description}</p>

@@ -4,10 +4,7 @@ import { SocialLinks } from "@/constants/social";
 
 const Footer = () => {
   return (
-    <div className="text-center flex flex-col mx-auto justify-between text-sm text-gray-400 font-light">
-      <div className="mb-1">
-        © 2024 Anish Awasthi. All rights reserved.
-      </div>
+    <div className="text-center flex flex-wrap gap-3 mx-auto justify-center items-centertext-sm text-gray-400 font-light">
 
       <div className="flex flex-wrap gap-x-2 gap-y-1 justify-center">
         {SocialLinks.map((s) => {
@@ -19,12 +16,15 @@ const Footer = () => {
               className="transition-transform transform hover:scale-125"
             >
               <div className="flex gap-2 items-center">
-                <Image src={s.icon} alt={s.name} width={20} height={20} />
+                <Image src={s.icon} alt={s.name} width={25} height={25} />
                 {/* <p>{s.username}</p> */}
               </div>
             </a>
           );
         })}
+      </div>
+      <div className="mb-1">
+        © 2024 Anish Awasthi. All rights reserved.
       </div>
     </div>
   );

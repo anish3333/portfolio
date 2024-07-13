@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Icons } from "./Icons";
+import BoxReveal from "./magicui/box-reveal";
+import WordFadeIn from "./magicui/word-fade-in";
 
 const Hero = () => {
   return (
@@ -20,12 +22,18 @@ const Hero = () => {
 
       <div className="flex flex-col gap-8 max-w-lg mb-8 md:mb-0 mr-5 max-md:mx-auto">
         <div>
-          <h1 className="text-5xl font-bold mb-4">
-            Hello!
-            <br />
-          </h1>
+          <WordFadeIn
+            words="Hello!"
+            delay={0.2}
+            className="text-5xl font-bold mb-4 text-blue-1"
+          />
+
           <p className="text-md leading-relaxed mb-8">
-            I&apos;m Anish Awasthi, a Web Developer from Mumbai, India, currently pursuing my second year of Computer Engineering. I&apos;m passionate about creating digital solutions that make a real difference. Always eager to learn and grow, I&apos;m on a mission to craft impactful applications that leave a lasting impression.
+            I&apos;m Anish Awasthi, a Web Developer from Mumbai, India,
+            currently pursuing my second year of Computer Engineering. I&apos;m
+            passionate about creating digital solutions that make a real
+            difference. Always eager to learn and grow, I&apos;m on a mission to
+            craft impactful applications that leave a lasting impression.
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-8 max-sm:gap-6">

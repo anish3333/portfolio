@@ -2,6 +2,7 @@
 
 import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
+import MarqueeSkillCards from "@/components/MarqueeSkillCards";
 import ProjectCard from "@/components/ProjectCard";
 import SkillsCard from "@/components/SkillCard";
 import ViewAllButton from "@/components/ViewAllButton";
@@ -20,7 +21,7 @@ const RootPage = () => {
           <div className=" flex justify-center text-4xl mb-7 font-bold ">
             Skills
           </div>
-          <SkillsCard skills={frontPageSkills} />
+          <MarqueeSkillCards skills={frontPageSkills} />
           <div className="flex mt-5 justify-center">
             <ViewAllButton href="/skills" />
           </div>

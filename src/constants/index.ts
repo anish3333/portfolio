@@ -140,7 +140,7 @@ export const skills: skillsInterface[] = [
 
 export const skillsSorted = skills.slice().sort((a, b) => b.rating - a.rating);
 
-export const frontPageSkills = skillsSorted.slice(0, 3);
+export const frontPageSkills = skillsSorted.slice(0, 6);
 
 // export type ValidSkills =
 //   | "Next.js"

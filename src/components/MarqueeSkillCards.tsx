@@ -1,6 +1,6 @@
 import React from "react";
 import Rating from "@/components/Rating";
-import BlurFade from "./magicui/blur-fade";
+import Marquee from "./magicui/marquee";
 
 
 
@@ -16,14 +16,14 @@ interface SkillsCardProps {
 }
 
 
-export default function SkillsCard({ skills }: SkillsCardProps) {
+export default function MarqueeSkillCards({ skills }: SkillsCardProps) {
     return (
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] lg:grid-cols-3">
+        <div className="mx-auto  md:max-w-[64rem] ">
+            <Marquee speed={100} className="w-full rounded-[19px]">
             {skills.map((skill, id) => (
-                <BlurFade key={skill.description} delay={0.25 + id * 0.05} inView>
                 <div
                     key={id}
-                    className="relative bg-[#5A72A0] overflow-hidden rounded-lg border-none bg-background p-2"
+                    className="relative bg-[#5A72A0] overflow-hidden rounded-lg border-none bg-background p-2 w-[300px]"
                 >
                     <div className="flex h-[230px] flex-col justify-between rounded-md p-6 sm:h-[230px]">
                         <skill.icon size={50} />
@@ -36,8 +36,8 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
                         </div>
                     </div>
                 </div>
-                </BlurFade>
             ))}
+        </Marquee>
         </div>
     );
 }

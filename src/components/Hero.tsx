@@ -8,7 +8,10 @@ import WordFadeIn from "./magicui/word-fade-in";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row-reverse md:justify-between py-8 md:py-0  text-white-1 min-h-full mt-4">
+    <div className="flex flex-col min-h-[calc(100vh-71px)] justify-center items-center">
+
+    
+    <div className="flex flex-col md:flex-row-reverse md:justify-between py-8 md:py-0  text-white-1">
       <div className="flex max-w-lg mb-8 md:mb-0 md:p-4 justify-center">
         <Image
           width={0}
@@ -20,7 +23,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-8 max-w-lg mb-8 md:mb-0 mr-5 max-md:mx-auto">
+      <div className="flex flex-col p-4 gap-8 max-w-lg mb-8 md:mb-0 mr-5 max-md:mx-auto">
         <div>
           <WordFadeIn
             words="Hello!"
@@ -56,7 +59,7 @@ const Hero = () => {
                 &nbsp;
                 <p>GitHub</p>
               </a>
-            </Button>
+            </Button> 
           </div>
           <div>
             <Button
@@ -77,6 +80,7 @@ const Hero = () => {
           </span>
         </div>
       </div>
+    </div>
     </div>
   );
 };

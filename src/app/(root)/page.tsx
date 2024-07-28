@@ -14,7 +14,7 @@ const RootPage = () => {
   return (
     <>
       <div className="flex flex-col h-full">
-        <div className="mx-auto max-w-[64rem] mb-10">
+        <div className="mx-auto mb-10">
           <Hero />
         </div>
         <div className="flex flex-col gap-44 h-full">

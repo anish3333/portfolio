@@ -11,9 +11,9 @@ const Hero = () => {
     <div className="flex flex-col h-[calc(100vh-71px)] justify-center lg:w-[calc(100vw-20rem)]">
 
     
-    <div className="flex flex-col md:flex-row-reverse justify-center py-8 md:py-0 w-full text-white-1">
+    <div className="flex flex-col md:flex-row-reverse justify-center py-8 md:py-0 w-full text-white-1 gap-10">
       {/* <div className=""> */}
-      <div className="flex max-w-lg mb-8 md:mb-0 md:p-4 justify-center items-center flex-grow">
+      <div className="flex justify-center items-center">
         <Image
           width={0}
           height={0}

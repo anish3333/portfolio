@@ -8,7 +8,7 @@ import WordFadeIn from "./magicui/word-fade-in";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col h-[calc(100vh-71px)] justify-center lg:w-[calc(100vw-20rem)]">
+    <div className="flex flex-col flex-1 min-h-[calc(100vh-71px)] justify-center lg:w-[calc(100vw-20rem)]">
 
     
     <div className="flex flex-col md:flex-row-reverse justify-center py-8 md:py-0 w-full text-white-1 gap-10">

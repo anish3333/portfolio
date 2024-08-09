@@ -41,25 +41,25 @@ const ProjectDetail = ({
         </Link>
 
         <div className=" flex flex-col gap-12 rounded-lg">
-          <div className="flex flex-col gap-5">  
+          <div className="flex flex-col gap-5">
             <div className="flex gap-y-2 gap-4 items-center flex-wrap mb-3">
               <h1 className="text-2xl sm:text-3xl text-blue-1 md:text-4xl font-bold capitalize">
                 {id.replace(/-/g, " ")}
               </h1>
               <div className="flex justify-center items-center gap-x-4 gap-y-1 flex-wrap">
                 {websiteLink && (
-                  <ShineBorder
-                  className="h-[45px] w-[45px] flex items-center justify-center"
-                  color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
-                    <a
-                      href={websiteLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white-1"
+                  <a
+                    href={websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ShineBorder
+                      className="text-white-1 h-[45px] w-[45px] flex items-center justify-center"
+                      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
                     >
                       <Icons.link size={25} />
-                    </a>
-                  </ShineBorder>
+                    </ShineBorder>
+                  </a>
                 )}
 
                 {githubLink && (

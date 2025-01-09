@@ -1,17 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, MapPin, School, MessageCircle, Globe } from "lucide-react";
+import { Download, MapPin, School, MessageCircle, Globe, TrophyIcon } from "lucide-react";
+import Link from "next/link";
+
+const tags = [
+  { icon: MapPin, label: "Mumbai, India" },
+  { icon: Globe, label: "Web Developer" },
+  { icon: TrophyIcon, label: "SIH 2024" },
+  { icon: School, label: "TSEC 2026" },
+  { icon: School, label: "English, Hindi & Marathi" },
+  { icon: School, label: "Mumbai University" },
+  { icon: School, label: "Third Year CSE" },
+];
 
 export function ProfileCard() {
   return (
-    <Card className="bg-zinc-800 border-none transition-all p-6 rounded-xl hover:scale-[1.02] h-fit text-zinc-100">
+    <Card className="bg-zinc-800 border-none transition-all p-6 rounded-2xl hover:scale-[1.01] h-full text-zinc-100">
       {/* Header Section */}
       <div className="flex justify-between items-start mb-4">
         <div className="flex gap-4">
           {/* Profile Image */}
           <div className="w-16 h-16 rounded-2xl overflow-hidden bg-purple-600 flex-shrink-0">
             <img
-              src="/placeholder.svg"
+              src="./images/anish.png"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -27,45 +38,32 @@ export function ProfileCard() {
               Anish Awasthi
             </h1>
             <p className="text-zinc-400 text-sm">
-              I'm a <span className="text-purple-400">Designer</span>
+              I'm a <span className="text-purple-400">Software Engineer</span>{" "}
             </p>
           </div>
         </div>
 
         {/* Resume Button */}
-        <div className="flex items-center gap-2">
-          <span className="text-zinc-400">Resume</span>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-zinc-400 hover:text-zinc-100 hover:bg-zinc-700"
-          >
-            <Download className="w-4 h-4" />
-          </Button>
+        <div >
+          <Link href="/pdfs/resume.pdf" target="_blank"
+          className="hover:text-zinc-100 hover:bg-zinc-700 p-1 flex items-center gap-2">
+            <span className="text-zinc-400">Resume</span>
+              <Download className="w-4 h-4 text-zinc-400" />
+          </Link>
         </div>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-4">
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-600">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm">India</span>
+      {tags.map((tag, index) => (
+        <div
+          key={index}
+          className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-600"
+        >
+          <tag.icon className="w-4 h-4" />
+          <span className="text-sm">{tag.label}</span>
         </div>
-
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-600">
-          <Globe className="w-4 h-4" />
-          <span className="text-sm">English & Tamil</span>
-        </div>
-
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-600">
-          <MessageCircle className="w-4 h-4" />
-          <span className="text-sm">Software Engineer</span>
-        </div>
-
-        <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-600">
-          <School className="w-4 h-4" />
-          <span className="text-sm">MIT University</span>
-        </div>
-      </div>
+      ))}
+    </div>
 
       {/* Contact Buttons */}
       <div className="grid grid-cols-2 gap-3">

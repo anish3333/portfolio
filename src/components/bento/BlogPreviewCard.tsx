@@ -17,7 +17,7 @@ export function BlogPreviewCard() {
   ]
 
   return (
-    <Card className="border-none p-6 transition-all h-full duration-300 hover:scale-[1.02] bg-zinc-800 text-zinc-100">
+    <Card className="border-none p-6 transition-all h-full duration-300 hover:scale-[1.01] bg-zinc-800 text-zinc-100">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">Recent Blog Posts</h2>
         <Button variant="ghost" size="sm" className="flex items-center gap-1 text-zinc-300 hover:text-zinc-100">

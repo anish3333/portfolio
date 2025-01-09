@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
-import { Loader2 } from "lucide-react";
+import { Github, Loader2 } from "lucide-react";
 
 export const GitHubStatsCard = () => {
   const [stats, setStats] = useState<any>({
@@ -59,6 +59,7 @@ export const GitHubStatsCard = () => {
         });
 
         const data = await response.json();
+        console.log(data)
         const repos = data.data.user.repositories.nodes;
 
         const totalCommits = repos.reduce((acc: number, repo: any) => {
@@ -96,7 +97,11 @@ export const GitHubStatsCard = () => {
   }
 
   return (
-    <Card className="p-6 border-none rounded-md transition-all duration-300 bg-zinc-50 hover:shadow-xl">
+    
+    <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-zinc-50 hover:shadow-xl relative">
+      <div className="absolute top-4 right-4 ">
+        <Github className="w-5 h-5 text-zinc-600" />
+      </div>
       <div className="flex flex-col gap-4">
         {/* Total Repositories */}
         <div className="p-4 rounded-lg bg-white">

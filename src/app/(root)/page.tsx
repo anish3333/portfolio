@@ -1,44 +1,49 @@
-
-import { SkillsCard } from "@/components/bento/SkillsCard"
-import { LeetCodeCard } from "@/components/bento/LeetCodeCard"
-import { GitHubStatsCard } from "@/components/bento/GitHubStatsCard"
-import { ProfileCard } from "@/components/bento/ProfileCard"
-import { AboutCard } from "@/components/bento/AboutCard"
-import { ProjectCard } from "@/components/bento/ProjectCard"
-import { AchievementsCard } from "@/components/bento/AchievementsCard"
-import { ConnectCard } from "@/components/bento/ConnectCard"
-import { BlogPreviewCard } from "@/components/bento/BlogPreviewCard"
+import { SkillsCard } from "@/components/bento/SkillsCard";
+import { LeetCodeCard } from "@/components/bento/LeetCodeCard";
+import { GitHubStatsCard } from "@/components/bento/GitHubStatsCard";
+import { ProfileCard } from "@/components/bento/ProfileCard";
+import { AboutCard } from "@/components/bento/AboutCard";
+import { ProjectCard } from "@/components/bento/ProjectCard";
+import { AchievementsCard } from "@/components/bento/AchievementsCard";
+import { ConnectCard } from "@/components/bento/ConnectCard";
+import { BlogPreviewCard } from "@/components/bento/BlogPreviewCard";
+import { ProjectCarousel } from "@/components/bento/ProjectCarousel";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-zinc-900 text-zinc-100 border-none">
-      <div className="container mx-auto p-4">
-        <div className="flex flex-col lg:flex-row gap-4 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-zinc-900 text-zinc-100 flex items-center justify-center">
+      <div className="container mx-auto p-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
           {/* Left Section */}
-          <div className="flex-1 space-y-4">
-            {/* Top Row - Small Boxes */}
-            <div className="grid grid-cols-3 gap-4">
+          <div className="grid lg:grid-rows-5 gap-4">
+            {/* ProfileCard with 1/3 rowspan */}
+            <div className="row-span-2">
+              <ProfileCard />
+            </div>
+
+            {/* Below grid with 2/3 rowspan */}
+            <div className="row-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <SkillsCard />
               <LeetCodeCard />
               <GitHubStatsCard />
             </div>
-
-            <ProfileCard />
-            <AboutCard />
           </div>
 
           {/* Right Section */}
-          <div className="flex-1 flex flex-col gap-4">
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid lg:grid-rows-5 gap-4">
+            {/* Top row with 2/3 rowspan */}
+            <div className="row-span-3 grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div className="lg:col-span-2">
-                <ProjectCard />
+                {/* <ProjectCard /> */}
+                <ProjectCarousel />
               </div>
               <div>
                 <AchievementsCard />
               </div>
             </div>
 
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Bottom row */}
+            <div className="row-span-2 grid grid-cols-1 lg:grid-cols-3 gap-4">
               <div>
                 <ConnectCard />
               </div>
@@ -50,6 +55,7 @@ export default function Page() {
         </div>
       </div>
     </main>
-  )
+  );
 }
+
 

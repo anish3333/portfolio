@@ -72,69 +72,6 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
   {
-    "id": "comprehensive-blog-website",
-    "category": ["Web Dev", "Full Stack", "MERN"],
-    "shortDescription": "Developed a comprehensive blog website focusing on building full stack applications using React and Appwrite.",
-    "websiteLink": "https://blog-website-five-psi.vercel.app/",
-    "githubLink": "https://github.com/anish3333/Blog-Website",
-    "techStack": [
-      "React",
-      "Appwrite",
-      "Tailwind CSS",
-      "Redux-Toolkit",
-      "React Router",
-      "Context API"
-    ],
-    "descriptionDetails": {
-      "paragraphs": [
-        "This project is a comprehensive blog website designed to teach full stack application development using React and Appwrite.",
-        "The website covers React basics, hooks, context API, and integration with Appwrite for backend services."
-      ],
-      "bullets": [
-        "Learned React Basics and Internal Workings",
-        "Deep dived into React Hooks with project-based learning",
-        "Understood Virtual DOM, Fibre, and Reconciliation",
-        "Integrated Tailwind CSS for efficient styling",
-        "Implemented React Router for navigation",
-        "Used Context API for state management",
-        "Built a full-stack application with Appwrite",
-        "Focused on production-grade application development"
-      ]
-    },
-    "pagesInfoArr": [
-      {
-        "title": "Landing Page",
-        "description": "This page is protected and does not allow viewer to see public posts when not logged in, after login you can view all public post",
-        "imgArr": [
-          "/images/projects/blog-website/landing.png"
-        ]
-      },
-      {
-        "title": "Post Detail",
-        "description": "You can check the title, content and the  picture of a post",
-        "imgArr": [
-          "/images/projects/blog-website/post_detail.png"
-        ]
-      },
-      {
-        "title": "Add your own post",
-        "description": "you can add your own post if you are logged in and use the integrated text editor as well, add images, set the post public or private.",
-        "imgArr": [
-          "/images/projects/blog-website/add_post.png",
-          "/images/projects/blog-website/added_new_post.png"
-        ]
-      },
-      {
-        "title": "Edit newly Added Post",
-        "description": "Some actions you can take on a newly added post is editing the post content or picture or deleting the post",
-        "imgArr": [
-          "/images/projects/blog-website/new_post_actions.png",
-          "/images/projects/blog-website/edit_your_post.png",
-        ]
-      }
-    ]
-  },
-  {
     "id": "flash-flow",
     "category": ["Web Dev", "Full Stack"],
     "shortDescription": "An advanced video conferencing application that mirrors the functionality of Zoom, built using Next.js and modern web technologies.",
@@ -194,6 +131,69 @@ export const Projects: ProjectInterface[] = [
         "description": "recorded videos are stored in the database and can be viewed by the user.",
         "imgArr": [
           "/images/projects/flash-flow/recordings.png",
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comprehensive-blog-website",
+    "category": ["Web Dev", "Full Stack", "MERN"],
+    "shortDescription": "Developed a comprehensive blog website focusing on building full stack applications using React and Appwrite.",
+    "websiteLink": "https://blog-website-five-psi.vercel.app/",
+    "githubLink": "https://github.com/anish3333/Blog-Website",
+    "techStack": [
+      "React",
+      "Appwrite",
+      "Tailwind CSS",
+      "Redux-Toolkit",
+      "React Router",
+      "Context API"
+    ],
+    "descriptionDetails": {
+      "paragraphs": [
+        "This project is a comprehensive blog website designed to teach full stack application development using React and Appwrite.",
+        "The website covers React basics, hooks, context API, and integration with Appwrite for backend services."
+      ],
+      "bullets": [
+        "Learned React Basics and Internal Workings",
+        "Deep dived into React Hooks with project-based learning",
+        "Understood Virtual DOM, Fibre, and Reconciliation",
+        "Integrated Tailwind CSS for efficient styling",
+        "Implemented React Router for navigation",
+        "Used Context API for state management",
+        "Built a full-stack application with Appwrite",
+        "Focused on production-grade application development"
+      ]
+    },
+    "pagesInfoArr": [
+      {
+        "title": "Landing Page",
+        "description": "This page is protected and does not allow viewer to see public posts when not logged in, after login you can view all public post",
+        "imgArr": [
+          "/images/projects/blog-website/landing.png"
+        ]
+      },
+      {
+        "title": "Post Detail",
+        "description": "You can check the title, content and the  picture of a post",
+        "imgArr": [
+          "/images/projects/blog-website/post_detail.png"
+        ]
+      },
+      {
+        "title": "Add your own post",
+        "description": "you can add your own post if you are logged in and use the integrated text editor as well, add images, set the post public or private.",
+        "imgArr": [
+          "/images/projects/blog-website/add_post.png",
+          "/images/projects/blog-website/added_new_post.png"
+        ]
+      },
+      {
+        "title": "Edit newly Added Post",
+        "description": "Some actions you can take on a newly added post is editing the post content or picture or deleting the post",
+        "imgArr": [
+          "/images/projects/blog-website/new_post_actions.png",
+          "/images/projects/blog-website/edit_your_post.png",
         ]
       }
     ]

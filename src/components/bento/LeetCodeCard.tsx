@@ -27,10 +27,22 @@ export const LeetCodeCard = () => {
   const [error, setError] = useState<string | null>(null);
 
   const username = "anish-awasthi";
-  const API_BASE_URL = "https://alfa-leetcode-api.onrender.com";  
+  const API_BASE_URL = "https://alfa-leetcode-api.onrender.com";
 
   useEffect(() => {
     const fetchLeetCodeStats = async () => {
+      const localStats = JSON.parse(localStorage.getItem("lcStats") || "{}");
+      if (localStats?.timestamp) {
+        const prevFetch = localStats.timestamp;
+        const currentFetch = Date.now();
+        const diff = currentFetch - prevFetch;
+        if (diff < 1000 * 60 * 60 * 24 * 7) {
+          // Use cached stats if within 7 days
+          setStats(localStats);
+          setLoading(false);
+          return;
+        }
+      }
       try {
         const [profileRes, contestRes] = await Promise.all([
           fetch(`${API_BASE_URL}/userProfile/${username}`),
@@ -44,14 +56,22 @@ export const LeetCodeCard = () => {
         const profileData = await profileRes.json();
         const contestData = await contestRes.json();
         // console.log(contestData);
-        // console.log(profileData);
-
-        setStats({
+        console.log(profileData);
+        const newStats = {
           username: username,
           ranking: profileData.ranking,
           totalSolved: profileData?.totalSolved,
           rating: contestData?.contestRating,
-        });
+        };
+
+        setStats(newStats);
+        localStorage.setItem(
+          "lcStats",
+          JSON.stringify({
+            ...newStats,
+            timestamp: Date.now(),
+          })
+        );
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to fetch stats");
       } finally {
@@ -64,7 +84,7 @@ export const LeetCodeCard = () => {
 
   if (loading) {
     return (
-      <Card className="p-4 bg-zinc-800 text-white min-h-[160px] flex items-center justify-center">
+      <Card className="p-4 bg-zinc-800 border-none text-white min-h-[160px] flex items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin text-zinc-400" />
       </Card>
     );
@@ -82,28 +102,29 @@ export const LeetCodeCard = () => {
   }
 
   return (
-    <Card className="p-5 bg-zinc-800 text-white hover:scale-105 border-none transition-all duration-300">
-      <div className="flex items-center gap-2 mb-4">
-        <div className="p-1.5 bg-zinc-700 rounded-md">
-          <Code className="w-4 h-4 text-zinc-300" />
-        </div>
-        <h3 className="font-semibold text-sm">LeetCode Stats</h3>
+    <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-zinc-50 hover:shadow-xl relative">
+      {/* Logo in the top-right corner */}
+      <div className="absolute top-4 right-4">
+        <Code className="w-5 h-5 text-zinc-600" />
       </div>
 
-      <div className="space-y-3">
-        <div className="flex items-center gap-2">
-          <Target className="w-4 h-4 text-zinc-400" />
-          <span className="text-sm">{stats?.totalSolved} problems solved</span>
+      <div className="flex flex-col gap-4">
+        {/* Total Problems Solved */}
+        <div className="p-4 rounded-lg bg-white">
+          <h3 className="text-sm text-zinc-600">Problems Solved</h3>
+          <p className="text-2xl font-bold">{stats.totalSolved || 0}</p>
         </div>
 
-        <div className="flex items-center gap-2">
-          <Trophy className="w-4 h-4 text-zinc-400" />
-          <span className="text-sm">Rank #{stats?.ranking}</span>
+        {/* Ranking */}
+        <div className="p-4 rounded-lg bg-yellow-100">
+          <h3 className="text-sm text-zinc-600">Ranking</h3>
+          <p className="text-2xl font-bold">#{stats.ranking || "N/A"}</p>
         </div>
 
-        <div className="flex items-center gap-2">
-          <Flame className="w-4 h-4 text-zinc-400" />
-          <span className="text-sm">Rating: {stats?.rating}</span>
+        {/* Rating */}
+        <div className="p-4 rounded-lg bg-white">
+          <h3 className="text-sm text-zinc-600">Rating</h3>
+          <p className="text-2xl font-bold">{stats.rating || "N/A"}</p>
         </div>
       </div>
     </Card>

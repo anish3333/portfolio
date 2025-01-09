@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card"
 
 export function AboutCard() {
   return (
-    <Card className="p-6 transition-all duration-300 hover:scale-[1.02] bg-zinc-800 text-zinc-100 border-none">
+    <Card className="p-6 transition-all duration-300 hover:scale-[1.01] bg-zinc-800 text-zinc-100 border-none">
       <h2 className="text-xl font-semibold mb-4">About Me</h2>
       <p className="text-zinc-300">
         Passionate software engineer with 5+ years of experience in building scalable web applications.

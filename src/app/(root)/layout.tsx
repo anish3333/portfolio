@@ -5,13 +5,14 @@ import React, { ReactNode } from "react";
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <nav className="z-10 pb-18">
+      {/* <nav className="z-10 pb-18">
         <Navbar />
       </nav>
       <main className="flex-grow px-6 lg:px-10">{children}</main>
       <footer className="mt-36 mx-2 mb-7">
         <Footer/>
-      </footer>
+      </footer> */}
+      {children}
     </div>
   );
 };

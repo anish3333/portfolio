@@ -99,8 +99,8 @@ export const GitHubStatsCard = () => {
   return (
     
     <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-zinc-50 hover:shadow-xl relative">
-      <div className="absolute top-4 right-4 ">
-        <Github className="w-5 h-5 text-zinc-600" />
+      <div className="absolute bottom-4 right-4 ">
+        <Github className="w-6 h-6 text-zinc-600" />
       </div>
       <div className="flex flex-col gap-4">
         {/* Total Repositories */}

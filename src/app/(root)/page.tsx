@@ -2,9 +2,7 @@ import { SkillsCard } from "@/components/bento/SkillsCard";
 import { LeetCodeCard } from "@/components/bento/LeetCodeCard";
 import { GitHubStatsCard } from "@/components/bento/GitHubStatsCard";
 import { ProfileCard } from "@/components/bento/ProfileCard";
-import { AboutCard } from "@/components/bento/AboutCard";
-import { ProjectCard } from "@/components/bento/ProjectCard";
-import { AchievementsCard } from "@/components/bento/AchievementsCard";
+import { ResourceLinksCard } from "@/components/bento/ResourceLinksCard";
 import { ConnectCard } from "@/components/bento/ConnectCard";
 import { BlogPreviewCard } from "@/components/bento/BlogPreviewCard";
 import { ProjectCarousel } from "@/components/bento/ProjectCarousel";
@@ -38,7 +36,7 @@ export default function Page() {
                 <ProjectCarousel />
               </div>
               <div>
-                <AchievementsCard />
+                <ResourceLinksCard />
               </div>
             </div>
 

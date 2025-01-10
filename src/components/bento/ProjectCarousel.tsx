@@ -39,7 +39,7 @@ export function ProjectCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="w-full relative bg-zinc-800 rounded-lg p-6 h-full">
+    <div className="w-full relative bg-zinc-800 rounded-2xl p-6 h-full">
       <div className="flex items-center justify-between mb-4 bg-zinc-800 rounded-lg">
         <span className="text-2xl font-bold text-zinc-100">
           Featured Projects
@@ -64,22 +64,20 @@ export function ProjectCarousel() {
           ))}
         </div>
       </div>
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-zinc-700/50 text-zinc-100 border-zinc-600 hover:bg-zinc-600 z-10"
+      <button
+        
+        className="absolute left-[1px] top-1/2 -translate-y-1/2  text-zinc-100 z-10 "
         onClick={scrollPrev}
       >
-        <ChevronLeft className="h-4 w-4" />
-      </Button>
-      <Button
-        variant="outline"
-        size="icon"
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-zinc-700/50 text-zinc-100 border-zinc-600 hover:bg-zinc-600 z-10"
+        <ChevronLeft className="h-5 w-5" /> 
+      </button>
+      <button
+        // size="icon"
+        className="absolute right-[1px] top-1/2 -translate-y-1/2  text-zinc-100  z-10"
         onClick={scrollNext}
       >
-        <ChevronRight className="h-4 w-4" />
-      </Button>
+        <ChevronRight className="h-5 w-5" />
+      </button>
     </div>
   );
 }

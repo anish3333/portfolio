@@ -23,7 +23,7 @@ export const navbarLinks = [
   },
 ];
 
-interface skillsInterface {
+export interface skillsInterface {
   name: string;
   description: string;
   rating: number;

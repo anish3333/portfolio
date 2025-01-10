@@ -1,7 +1,16 @@
+'use client'
+
+import React from 'react';
 import { Card } from "@/components/ui/card";
-import { Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Twitter, Instagram, Linkedin, Github, Code, Mail } from 'lucide-react';
 
 const socialLinks = [
+  {
+    platform: "Email",
+    handle: "@anish__awasthi",
+    url: "mailto:anishawasthi16@gmail.com",
+    icon: Mail,
+  },
   {
     platform: "Twitter",
     handle: "@anish__awasthi",
@@ -21,30 +30,35 @@ const socialLinks = [
     icon: Linkedin,
   },
   {
-    platform: "LinkedIn",
+    platform: "GitHub",
     handle: "@anish3333",
     url: "https://github.com/anish3333",
     icon: Github,
+  },
+  {
+    platform: "Leetcode",
+    handle: "@anish-awasthi",
+    url: "https://leetcode.com/u/anish-awasthi/",
+    icon: Code,
   },
 ];
 
 export function ConnectCard() {
   return (
-    <Card className="p-6 border-none transition-all duration-300 hover:scale-[1.01] bg-zinc-800 text-zinc-100 h-full">
-      <h2 className="font-semibold mb-4">Follow Me</h2>
-      <div className="space-y-3 flex lg:flex-col md:flex-row md:flex-wrap">
+    <Card className="rounded-xl p-4 border-none transition-all duration-300 hover:scale-[1.02] bg-zinc-800 text-zinc-100 h-full shadow-lg">
+      <h2 className="font-bold mb-4 text-lg tracking-tight">Let's Connect</h2>
+      <div className="grid lg:grid-cols-2 sm:grid-cols-6 max-sm:grid-cols-3  gap-3">
         {socialLinks.map((link) => {
           const Icon = link.icon;
           return (
             <a
               key={link.platform}
               href={link.url}
-              className="flex items-center justify-start gap-2 text-sm hover:text-purple-400 bg-zinc-700 rounded-lg p-[6px]"
+              className="flex flex-col items-center justify-center gap-2 text-xs hover:text-purple-400 bg-zinc-700/50 rounded-lg p-3 transition-all duration-200 hover:bg-zinc-700/70 group"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Icon className="w-6 h-6 bg-zinc-800 p-1 rounded-md" />
-              <span className="lg:hidden">{link.handle}</span>
-              <span className="max-lg:hidden">{link.platform}</span>
-
+              <Icon className="w-8 h-8 bg-zinc-800 p-1.5 rounded-lg transition-transform duration-200 group-hover:scale-110" />
             </a>
           );
         })}
@@ -52,3 +66,4 @@ export function ConnectCard() {
     </Card>
   );
 }
+

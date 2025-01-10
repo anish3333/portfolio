@@ -15,12 +15,12 @@ const tags = [
 
 export function ProfileCard() {
   return (
-    <Card className="bg-zinc-800 border-none transition-all p-6 rounded-2xl hover:scale-[1.01] h-full text-zinc-100">
+    <Card className="bg-zinc-800 border-none p-6 rounded-2xl hover:scale-[1.01] transition-all duration-300 h-full text-zinc-100">
       {/* Header Section */}
       <div className="flex justify-between items-start mb-4">
         <div className="flex gap-4">
           {/* Profile Image */}
-          <div className="w-16 h-16 rounded-2xl overflow-hidden bg-purple-600 flex-shrink-0">
+          <div className="w-20 h-20 rounded-2xl overflow-hidden bg-purple-600 flex-shrink-0">
             <img
               src="./images/anish.png"
               alt="Profile"
@@ -31,10 +31,8 @@ export function ProfileCard() {
           {/* Name and Status */}
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500"></div>
-              <span className="text-zinc-400 text-sm">Available To Work</span>
             </div>
-            <h1 className="text-zinc-100 text-xl font-semibold">
+            <h1 className="text-zinc-100 text-3xl font-semibold">
               Anish Awasthi
             </h1>
             <p className="text-zinc-400 text-sm">

@@ -5,8 +5,8 @@ import React, { ReactNode } from "react";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="p-6 bg-first-1">{children}</div>
+    <div className="flex flex-col min-h-screen bg-third-1">
+      <div>{children}</div>
     </div>
   );
 };

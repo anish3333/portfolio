@@ -10,7 +10,7 @@ import { ProjectCarousel } from "@/components/bento/ProjectCarousel";
 export default function Page() {
   return (
     <main className="min-h-screen text-zinc-100 flex items-center justify-center">
-      <div className="container mx-auto p-3">
+      <div className="container flex flex-col justify-center items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-7xl mx-auto">
           {/* Left Section */}
           <div className="grid lg:grid-rows-5 gap-4">

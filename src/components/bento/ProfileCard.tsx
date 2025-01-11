@@ -21,11 +21,11 @@ export function ProfileCard() {
         <div className="flex gap-4">
           {/* Profile Image */}
           <div className="w-20 h-20 rounded-2xl overflow-hidden bg-second-1 flex-shrink-0">
-            {/* <img
-              src="./images/anish-yellow.png"
+            <img
+              src="./images/anish-purple.png"
               alt="Profile"
               className="w-full h-full object-cover"
-            /> */}
+            />
           </div>
 
           {/* Name and Status */}
@@ -55,7 +55,7 @@ export function ProfileCard() {
       {tags.map((tag, index) => (
         <div
           key={index}
-          className="flex items-center gap-2 px-3 py-1 rounded-full bg-third-1 text-first-1"
+          className="flex items-center gap-2 px-3 py-1 rounded-full bg-second-1 text-third-1"
         >
           <tag.icon className="w-4 h-4"/>
           <span className="text-sm">{tag.label}</span>

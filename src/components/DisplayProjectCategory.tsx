@@ -12,7 +12,7 @@ const DisplayProjectCategory = ({category} : {category :  ValidCategory[]}) => {
         return (
           <span
             key={cat}
-            className="inline-block bg-white-1 rounded-full px-3 py-1 text-sm font-semibold text-gray-600"
+            className="inline-block bg-second-1 rounded-full px-3 py-1 text-md font-semibold text-third-1"
           >
             {cat}
           </span>

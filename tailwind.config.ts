@@ -24,7 +24,17 @@ const config = {
         },
         white:{
           1: '#FDFFE2'
+        },
+        first:{
+          1: '#11171c'
+        },
+        second:{
+          1: '#6956e9'
+        },
+        third:{
+          1: "#fefcff"
         }
+      
       },
       keyframes: {
         marquee: {

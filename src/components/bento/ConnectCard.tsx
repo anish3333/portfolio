@@ -45,7 +45,7 @@ const socialLinks = [
 
 export function ConnectCard() {
   return (
-    <Card className="rounded-xl p-4 border-none transition-all duration-300 hover:scale-[1.02] bg-zinc-800 text-zinc-100 h-full shadow-lg">
+    <Card className="rounded-xl p-4 border-none transition-all duration-300 hover:scale-[1.02] bg-first-1 text-zinc-100 h-full shadow-lg">
       <h2 className="font-bold mb-4 text-lg tracking-tight">Let's Connect</h2>
       <div className="grid lg:grid-cols-2 sm:grid-cols-6 max-sm:grid-cols-3  gap-3">
         {socialLinks.map((link) => {
@@ -54,7 +54,7 @@ export function ConnectCard() {
             <a
               key={link.platform}
               href={link.url}
-              className="flex flex-col items-center justify-center gap-2 text-xs hover:text-purple-400 bg-zinc-700/50 rounded-lg p-3 transition-all duration-200 hover:bg-zinc-700/70 group"
+              className="flex flex-col items-center justify-center gap-2 text-xs hover:text-second-1 bg-zinc-700/50 rounded-lg p-3 transition-all duration-200 hover:bg-zinc-700/70 group"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import PopoverNav from "@/components/PopoverNav";
 import React, { ReactNode } from "react";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
@@ -12,6 +13,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       <footer className="mt-36 mx-2 mb-7">
         <Footer/>
       </footer> */}
+
+      <div className=" fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-50">
+        <PopoverNav />
+      </div>
       {children}
     </div>
   );

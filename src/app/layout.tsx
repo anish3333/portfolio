@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#1A2130]`}>
+      <body className={`${inter.className} bg-[#f2f3f7]`}>
         {/* Use ClientScript for voiceflow */}
-        <ChatBot />
+        {/* <ChatBot /> */}
         {children}
         <Toaster
           position="bottom-left"

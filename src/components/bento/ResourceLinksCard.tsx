@@ -21,24 +21,23 @@ const resources = [
 
 export function ResourceLinksCard() {
   return (
-    <Card className="rounded-xl p-4 transition-all duration-300 border-none hover:scale-[1.01] bg-zinc-800 text-zinc-100 h-full">
-      <span className="text-2xl font-bold text-zinc-100">
+    <Card className="rounded-xl p-4 transition-all duration-300 border-none hover:scale-[1.01] bg-first-1 text-third-1 h-full shadow-xl">
+      <span className="text-2xl font-bold text-third-1">
           Resources 
         </span>
-      <div className="flex flex-col h-full space-y-4 mt-1">
+      <div className="flex flex-col h-full space-y-4 mt-2">
         {resources.map((resource, index) => (
           <a
             key={index}
             href={resource.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col p-4 rounded-xl bg-opacity-20 bg-slate-400 hover:bg-opacity-30 transition-all duration-300"
+            className="group flex flex-col p-4 rounded-xl  bg-third-1 text-first-1  hover:bg-second-1 transition-all duration-300"
           >
-            <div className="flex items-center space-x-2">
-              <ExternalLink className="w-5 h-5 text-blue-400 group-hover:text-blue-300" />
-              <h3 className="text-sm font-semibold tracking-wide">{resource.title}</h3>
+            <div className="flex items-center justify-end space-y-2 mb-1">
+              <ExternalLink className="w-5 h-5 text-first-1 " />
             </div>
-            <p className="text-xs text-zinc-400 group-hover:text-zinc-300 transition-colors duration-300">
+            <p className="lg:text-xs max-lg:text-sm text-first-1 transition-colors duration-300">
               {resource.description}
             </p>
           </a>

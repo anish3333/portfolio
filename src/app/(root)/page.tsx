@@ -9,9 +9,9 @@ import { ProjectCarousel } from "@/components/bento/ProjectCarousel";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-zinc-900 text-zinc-100 flex items-center justify-center">
+    <main className="min-h-screen text-zinc-100 flex items-center justify-center">
       <div className="container mx-auto p-3">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-7xl mx-auto">
           {/* Left Section */}
           <div className="grid lg:grid-rows-5 gap-4">
             {/* ProfileCard with 1/3 rowspan */}
@@ -21,9 +21,9 @@ export default function Page() {
 
             {/* Below grid with 2/3 rowspan */}
             <div className="row-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <SkillsCard />
               <LeetCodeCard />
               <GitHubStatsCard />
+              <SkillsCard />
             </div>
           </div>
 

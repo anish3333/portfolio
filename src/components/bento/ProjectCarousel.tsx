@@ -39,13 +39,13 @@ export function ProjectCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="w-full relative bg-zinc-800 rounded-2xl p-6 h-full">
-      <div className="flex items-center justify-between mb-4 bg-zinc-800 rounded-lg">
+    <div className="w-full relative bg-first-1 rounded-2xl p-6 h-full shadow-xl">
+      <div className="flex items-center justify-between mb-4 bg-first-1 rounded-lg">
         <span className="text-2xl font-bold text-zinc-100">
           Featured Projects
         </span>
         <Link href={`/projects/${Projects[currentIndex].id}`} passHref>
-          <Button className="px-4 py-2 text-sm font-medium text-zinc-100 bg-purple-600 rounded-lg hover:bg-purple-500 transition-colors">
+          <Button className="px-4 py-2 text-sm font-medium text-first-1 bg-third-1 rounded-lg hover:bg-second-1 transition-colors">
             Read More
           </Button>
         </Link>

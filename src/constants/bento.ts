@@ -97,21 +97,5 @@ export const BentoSkills: skillsInterface[][] = [
       rating: 5,
       icon: Icons.tailwindcss,
     },
-  ],
-  [
-    {
-      name: "Bootstrap",
-      description:
-        "Quickly create responsive and appealing web designs using a popular CSS framework.",
-      rating: 2,
-      icon: Icons.bootstrap,
-    },
-    {
-      name: "MySQL",
-      description:
-        "Manage and organize relational databases efficiently for data-driven applications.",
-      rating: 3,
-      icon: Icons.mysql,
-    },
-  ],
+  ]
 ];

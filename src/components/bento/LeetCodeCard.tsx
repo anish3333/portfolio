@@ -84,7 +84,7 @@ export const LeetCodeCard = () => {
 
   if (loading) {
     return (
-      <Card className="p-4 bg-zinc-800 border-none text-white min-h-[160px] flex items-center justify-center">
+      <Card className="p-4 bg-second-1 border-none text-white min-h-[160px] flex items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin text-zinc-400" />
       </Card>
     );
@@ -92,7 +92,7 @@ export const LeetCodeCard = () => {
 
   if (error || !stats) {
     return (
-      <Card className="p-4 bg-zinc-800 text-white min-h-[160px] flex items-center justify-center">
+      <Card className="p-4 bg-second-1 text-white min-h-[160px] flex items-center justify-center">
         <div className="flex flex-col items-center gap-2">
           <AlertCircle className="w-6 h-6 text-red-400" />
           <span className="text-sm text-red-400">Failed to load stats</span>
@@ -102,28 +102,28 @@ export const LeetCodeCard = () => {
   }
 
   return (
-    <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-zinc-50 hover:shadow-xl relative">
+    <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-first-1 text-third-1 shadow-xl relative">
       {/* Logo in the top-right corner */}
       <div className="absolute bottom-4 right-4">
-        <Code className="w-6 h-6 text-zinc-600" />
+        <Code className="w-6 h-6 " />
       </div>
 
       <div className="flex flex-col gap-4">
         {/* Total Problems Solved */}
         <div className="p-4 rounded-lg bg-white">
-          <h3 className="text-sm text-zinc-600">Problems Solved</h3>
+          <h3 className="text-sm ">Problems Solved</h3>
           <p className="text-2xl font-bold">{stats.totalSolved || 0}</p>
         </div>
 
         {/* Ranking */}
-        <div className="p-4 rounded-lg bg-yellow-100">
-          <h3 className="text-sm text-zinc-600">Ranking</h3>
+        <div className="p-4 rounded-lg bg-second-1 text-third-1">
+          <h3 className="text-sm ">Ranking</h3>
           <p className="text-2xl font-bold">#{stats.ranking || "N/A"}</p>
         </div>
 
         {/* Rating */}
         <div className="p-4 rounded-lg bg-white">
-          <h3 className="text-sm text-zinc-600">Rating</h3>
+          <h3 className="text-sm ">Rating</h3>
           <p className="text-2xl font-bold">{stats.rating || "N/A"}</p>
         </div>
       </div>

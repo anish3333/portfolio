@@ -10,13 +10,13 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, image, description }: ProjectCardProps) {
   return (
-    <Card className="border-none bg-transparent text-zinc-100 h-full">
+    <Card className="border-none bg-transparent text-third-1 h-full">
       <div className="space-y-4">
         <div className="relative h-48 rounded-lg overflow-hidden">
           <Image src={image} alt={title} fill className="object-cover" />
         </div>
-        <h3 className="font-semibold text-lg">{title}</h3>
-        <p className="text-sm text-zinc-300">{description}</p>
+        <h3 className="font-bold text-lg">{title}</h3>
+        <p className="text-sm text-third-1">{description}</p>
         {/* <Button
           variant="outline"
           size="sm"

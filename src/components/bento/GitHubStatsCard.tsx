@@ -90,7 +90,7 @@ export const GitHubStatsCard = () => {
 
   if (loading) {
     return (
-      <Card className="p-4 border-none transition-all duration-300 bg-zinc-800 text-zinc-100 min-h-[160px] flex items-center justify-center">
+      <Card className="p-4 border-none transition-all duration-300 bg-first-1 text-zinc-100 min-h-[160px] flex items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin" />
       </Card>
     );
@@ -98,26 +98,26 @@ export const GitHubStatsCard = () => {
 
   return (
     
-    <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-zinc-50 hover:shadow-xl relative">
+    <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-first-1 text-third-1 shadow-xl relative">
       <div className="absolute bottom-4 right-4 ">
-        <Github className="w-6 h-6 text-zinc-600" />
+        <Github className="w-6 h-6 " />
       </div>
       <div className="flex flex-col gap-4">
         {/* Total Repositories */}
         <div className="p-4 rounded-lg bg-white">
-          <h3 className="text-sm text-zinc-600">Total Repositories</h3>
+          <h3 className="text-sm ">Total Repositories</h3>
           <p className="text-2xl font-bold">{stats.repos || 0}</p>
         </div>
 
         {/* Total Commits */}
-        <div className="p-4 rounded-lg bg-green-100">
-          <h3 className="text-sm text-zinc-600">Total Commits</h3>
+        <div className="p-4 rounded-lg bg-second-1 text-third-1">
+          <h3 className="text-sm ">Total Commits</h3>
           <p className="text-2xl font-bold">{stats.commits || "N/A"}</p>
         </div>
 
         {/* GitHub Profile */}
         <div className="p-4 rounded-lg bg-white">
-          <h3 className="text-sm text-zinc-600">GitHub Profile</h3>
+          <h3 className="text-sm ">GitHub Profile</h3>
           <a
             href={`https://github.com/${username}`}
             target="_blank"

@@ -15,17 +15,17 @@ const tags = [
 
 export function ProfileCard() {
   return (
-    <Card className="bg-zinc-800 border-none p-6 rounded-2xl hover:scale-[1.01] transition-all duration-300 h-full text-zinc-100">
+    <Card className="bg-first-1 border-none p-6 rounded-2xl transition-all shadow-xl duration-300 h-full text-zinc-100">
       {/* Header Section */}
       <div className="flex justify-between items-start mb-4">
         <div className="flex gap-4">
           {/* Profile Image */}
-          <div className="w-20 h-20 rounded-2xl overflow-hidden bg-purple-600 flex-shrink-0">
-            <img
-              src="./images/anish.png"
+          <div className="w-20 h-20 rounded-2xl overflow-hidden bg-second-1 flex-shrink-0">
+            {/* <img
+              src="./images/anish-yellow.png"
               alt="Profile"
               className="w-full h-full object-cover"
-            />
+            /> */}
           </div>
 
           {/* Name and Status */}
@@ -36,7 +36,7 @@ export function ProfileCard() {
               Anish Awasthi
             </h1>
             <p className="text-zinc-400 text-sm">
-              I'm a <span className="text-purple-400">Software Engineer</span>{" "}
+              I'm a <span className="text-second-1">Software Engineer</span>{" "}
             </p>
           </div>
         </div>
@@ -55,9 +55,9 @@ export function ProfileCard() {
       {tags.map((tag, index) => (
         <div
           key={index}
-          className="flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 text-zinc-600"
+          className="flex items-center gap-2 px-3 py-1 rounded-full bg-third-1 text-first-1"
         >
-          <tag.icon className="w-4 h-4" />
+          <tag.icon className="w-4 h-4"/>
           <span className="text-sm">{tag.label}</span>
         </div>
       ))}
@@ -67,14 +67,14 @@ export function ProfileCard() {
       <div className="grid grid-cols-2 gap-3">
         <Button
           variant="secondary"
-          className="w-full bg-zinc-700 hover:bg-zinc-600 text-zinc-100"
+          className="w-full bg-third-1 text-first-1 hover:scale-[1.02] duration-200 transition-all"
         >
           <MessageCircle className="w-4 h-4 mr-2" />
           Telegram Me
         </Button>
         <Button
           variant="secondary"
-          className="w-full bg-zinc-700 hover:bg-zinc-600 text-zinc-100"
+          className="w-full bg-third-1 hover:scale-[1.02] duration-200 transition-all text-first-1"
         >
           <MessageCircle className="w-4 h-4 mr-2" />
           WhatsApp Me

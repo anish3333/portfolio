@@ -3,7 +3,6 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Icons } from "./Icons";
-import BoxReveal from "./magicui/box-reveal";
 import WordFadeIn from "./magicui/word-fade-in";
 
 const Hero = () => {

@@ -15,7 +15,7 @@ export default function Rating({ stars }: ratingProps) {
       {rating.map((val, ind) =>
         val === 1 ? (
           <svg
-            className="w-4 h-4 text-blue-1"
+            className="w-4 h-4 text-second-1"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

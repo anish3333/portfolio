@@ -16,14 +16,9 @@ export const navbarLinks = [
     route: "/projects",
     imageURL: "/icons/project.svg",
   },
-  {
-    label: "Contact",
-    route: "/contact",
-    imageURL: "/icons/contact.svg",
-  },
 ];
 
-interface skillsInterface {
+export interface skillsInterface {
   name: string;
   description: string;
   rating: number;

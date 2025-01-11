@@ -23,10 +23,10 @@ export default function SkillsCard({ skills }: SkillsCardProps) {
                 <BlurFade key={skill.description} delay={0.25 + id * 0.05} inView>
                 <div
                     key={id}
-                    className="relative bg-[#5A72A0] overflow-hidden rounded-lg border-none bg-background p-2"
+                    className="relative bg-third-1 text-first-1 overflow-hidden rounded-lg border-none bg-background p-2"
                 >
                     <div className="flex h-[230px] flex-col justify-between rounded-md p-6 sm:h-[230px]">
-                        <skill.icon size={50} />
+                        <skill.icon size={50} classname="hover:text-second-1"/>
                         <div className="space-y-2">
                             <h3 className="font-bold">{skill.name}</h3>
                             <p className="text-sm text-muted-foreground">

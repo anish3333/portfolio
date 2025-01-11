@@ -43,7 +43,7 @@ const ProjectDetail = ({
         <div className=" flex flex-col gap-12 rounded-lg">
           <div className="flex flex-col gap-5">
             <div className="flex gap-y-2 gap-4 items-center flex-wrap mb-3">
-              <h1 className="text-2xl sm:text-3xl text-blue-1 md:text-4xl font-bold capitalize">
+              <h1 className="text-2xl sm:text-3xl text-second-1 md:text-4xl font-bold capitalize">
                 {id.replace(/-/g, " ")}
               </h1>
               <div className="flex justify-center items-center gap-x-4 gap-y-1 flex-wrap">
@@ -95,7 +95,7 @@ const ProjectDetail = ({
           </div>
 
           <div>
-            <div className="font-semibold mb-3 text-blue-1">Tech Stack:</div>
+            <div className="font-semibold mb-3 text-second-1">Tech Stack:</div>
             <div className="flex flex-wrap gap-2 text-sm font-semibold">
               {techStack.map((tech, index) => (
                 <span
@@ -128,7 +128,7 @@ const ProjectDetail = ({
           </div>
           {pagesInfoArr.map((page, index) => (
             <div key={index} className="mb-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize mb-2 text-blue-1">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize mb-2 text-second-1">
                 {page.title}
               </h2>
               <p className="text-gray-300 mb-4">{page.description}</p>

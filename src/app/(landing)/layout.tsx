@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+
 import Navbar from "@/components/Navbar";
 import PopoverNav from "@/components/PopoverNav";
 import React, { ReactNode } from "react";

@@ -53,7 +53,7 @@ export function SkillsCard() {
         <h3 className="font-bold text-2xl mb-2">Skills</h3>
         <div className="flex flex-wrap gap-1">
           {BentoSkills.map((line, id) => (
-            <div className="p-2 overflow-hidden">
+            <div className="p-2 overflow-hidden" key={id}>
 
               <MarqueeSkill key={id}skills={line} reverse={id % 2 === 0} />
             </div>

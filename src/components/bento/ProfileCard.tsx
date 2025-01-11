@@ -36,7 +36,7 @@ export function ProfileCard() {
               Anish Awasthi
             </h1>
             <p className="text-zinc-400 text-sm">
-              I'm a <span className="text-second-1">Software Engineer</span>{" "}
+              I&apos;m a <span className="text-second-1">Software Engineer</span>{" "}
             </p>
           </div>
         </div>

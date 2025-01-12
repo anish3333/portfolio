@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 const resources = [
   {
     title: "React Docs",
-    description: "Comprehensive guide to learn React.",
+    description: "Detailed guide to learn React.",
     url: "https://react.dev",
   },
   {
@@ -23,9 +23,11 @@ export function ResourceLinksCard() {
   return (
     <Card className="rounded-xl p-4 transition-all duration-300 border-none hover:scale-[1.01] bg-first-1 text-third-1 h-full shadow-xl">
       <span className="text-2xl font-bold text-third-1">Resources</span>
-      <div className="flex flex-col h-full space-y-4 mt-2">
+      <div className="flex flex-col h-full space-y-4 mt-2 
+      max-lg:flex-row max-lg:space-y-0 max-lg:space-x-4
+      max-sm:flex-col max-sm:space-y-4 max-sm:space-x-0 max-sm:mt-2">
         {resources.map((resource, index) => (
-          <div key={index} >
+          <div key={index}>
             <a
               href={resource.url}
               target="_blank"

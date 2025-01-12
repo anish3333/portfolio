@@ -20,9 +20,17 @@ export default function Page() {
             </div>
 
             {/* Below grid with 2/3 rowspan */}
-            <div className="row-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="max-lg:hidden row-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <LeetCodeCard />
               <GitHubStatsCard />
+              <SkillsCard />
+            </div>
+
+            <div className="lg:hidden row-span-3 grid grid-cols-1 sm:grid-cols-2  gap-4">
+              <LeetCodeCard />
+              <GitHubStatsCard />
+            </div>
+            <div className="lg:hidden">
               <SkillsCard />
             </div>
           </div>
@@ -55,5 +63,3 @@ export default function Page() {
     </main>
   );
 }
-
-

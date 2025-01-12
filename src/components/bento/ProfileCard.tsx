@@ -38,9 +38,9 @@ export function ProfileCard() {
           </div>
 
           {/* Name and Status */}
-          <div className="flex flex-col justify-center items-center space-y-1">
-            <div className="flex items-center gap-2"></div>
-            <h1 className="text-zinc-100 text-3xl max-sm:text-4xl font-semibold">
+          <div className="flex flex-col justify-center items-start  space-y-1">
+            {/* <div className="flex items-center gap-2"></div> */}
+            <h1 className="text-zinc-100 text-4xl  max-sm:w-full font-semibold">
               Anish Awasthi
             </h1>
             <p className="text-zinc-400 text-sm max-sm:hidden">
@@ -60,7 +60,7 @@ export function ProfileCard() {
             <span className="text-md">Resume</span>
             <Download className="w-5 h-5  hover:scale-[1.05]" />
           </Link>
-          <div className="max-sm:block hidden">
+          <div className="max-sm:block hidden ml-2">
             <p className="text-zinc-400 text-sm">
               I&apos;m a{" "}
               <span className="text-second-1 text-lg">Software Engineer</span>{" "}

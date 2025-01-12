@@ -25,7 +25,7 @@ export function ResourceLinksCard() {
       <span className="text-2xl font-bold text-third-1">Resources</span>
       <div className="flex flex-col h-full space-y-4 mt-2">
         {resources.map((resource, index) => (
-          <div key={index}>
+          <div key={index} >
             <a
               href={resource.url}
               target="_blank"

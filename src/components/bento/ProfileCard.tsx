@@ -38,12 +38,12 @@ export function ProfileCard() {
           </div>
 
           {/* Name and Status */}
-          <div className="space-y-1">
+          <div className="flex flex-col justify-center items-center space-y-1">
             <div className="flex items-center gap-2"></div>
-            <h1 className="text-zinc-100 text-3xl font-semibold">
+            <h1 className="text-zinc-100 text-3xl max-sm:text-4xl font-semibold">
               Anish Awasthi
             </h1>
-            <p className="text-zinc-400 text-sm">
+            <p className="text-zinc-400 text-sm max-sm:hidden">
               I&apos;m a{" "}
               <span className="text-second-1 text-lg">Software Engineer</span>{" "}
             </p>
@@ -51,7 +51,7 @@ export function ProfileCard() {
         </div>
 
         {/* Resume Button */}
-        <div className="flex justify-end max-sm:w-full">
+        <div className="flex flex-row-reverse justify-between max-sm:w-full">
           <Link
             href="/pdfs/resume.pdf"
             target="_blank"
@@ -60,6 +60,12 @@ export function ProfileCard() {
             <span className="text-md">Resume</span>
             <Download className="w-5 h-5  hover:scale-[1.05]" />
           </Link>
+          <div className="max-sm:block hidden">
+            <p className="text-zinc-400 text-sm">
+              I&apos;m a{" "}
+              <span className="text-second-1 text-lg">Software Engineer</span>{" "}
+            </p>
+          </div>
         </div>
       </div>
 

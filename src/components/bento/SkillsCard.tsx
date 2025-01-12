@@ -11,7 +11,7 @@ function NormalSkillCard() {
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="flex items-center bg-zinc-700 px-3 py-2 rounded-lg text-md hover:bg-zinc-600 transition-colors duration-300"
+            className="flex items-center bg-gray-800 px-3 py-2 rounded-lg text-md hover:bg-second-1 hover:text-third-1 transition-colors duration-300"
           >
             <skill.icon className="mr-1 text-sm" />
             <span>{skill.name}</span>

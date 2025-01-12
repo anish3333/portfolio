@@ -1,13 +1,26 @@
-import { SkillsCard } from "@/components/bento/SkillsCard";
-import { LeetCodeCard } from "@/components/bento/LeetCodeCard";
-import { GitHubStatsCard } from "@/components/bento/GitHubStatsCard";
-import { ProfileCard } from "@/components/bento/ProfileCard";
-import { ResourceLinksCard } from "@/components/bento/ResourceLinksCard";
-import { ConnectCard } from "@/components/bento/ConnectCard";
-import { BlogPreviewCard } from "@/components/bento/BlogPreviewCard";
-import { ProjectCarousel } from "@/components/bento/ProjectCarousel";
+"use client";
+
+import {
+  LeetCodeCard,
+  GitHubStatsCard,
+  ProfileCard,
+  SkillsCard,
+  ResourceLinksCard,
+  ConnectCard,
+  BlogPreviewCard,
+  ProjectCarousel,
+} from "@/components/bento";
+import { useEffect } from "react";
 
 export default function Page() {
+  async function fetchData() {
+    const response = await fetch("/api/");
+    const data = await response.json();
+    console.log(data);
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <main className="min-h-screen text-zinc-100 flex items-center justify-center">
       <div className="container flex flex-col justify-center items-center p-3">

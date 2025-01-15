@@ -84,7 +84,7 @@ export const LeetCodeCard = () => {
 
   if (loading) {
     return (
-      <Card className="p-4 bg-second-1 border-none text-white min-h-[160px] flex items-center justify-center">
+      <Card className="p-4 rounded-2xl bg-second-1 border-none text-white min-h-[160px] flex items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin text-zinc-400" />
       </Card>
     );

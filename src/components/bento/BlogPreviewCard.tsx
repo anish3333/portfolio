@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react'
 
 export function BlogPreviewCard() {
   return (
-    <Card className="border-none p-6 transition-all h-full duration-300 shadow-xl bg-first-1 text-zinc-100">
+    <Card className="rounded-2xl border-none p-6 transition-all h-full duration-300 shadow-xl bg-first-1 text-zinc-100">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-semibold">Recent Blog Posts</h2>
         <Button variant="ghost" size="sm" className="flex items-center gap-1 text-third-1 hover:text-zinc-100">

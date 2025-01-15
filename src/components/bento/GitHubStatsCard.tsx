@@ -90,7 +90,7 @@ export const GitHubStatsCard = () => {
 
   if (loading) {
     return (
-      <Card className="p-4 border-none transition-all duration-300 bg-first-1 text-zinc-100 min-h-[160px] flex items-center justify-center">
+      <Card className="p-4 rounded-2xl border-none transition-all duration-300 bg-first-1 text-zinc-100 min-h-[160px] flex items-center justify-center">
         <Loader2 className="w-6 h-6 animate-spin" />
       </Card>
     );

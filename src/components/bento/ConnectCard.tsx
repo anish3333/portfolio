@@ -1,15 +1,16 @@
-'use client'
+"use client";
 
-import React from 'react';
+import React from "react";
 import { Card } from "@/components/ui/card";
-import { socialLinks } from '@/constants/social';
-
-
+import { socialLinks } from "@/constants/social";
+import Image from "next/image";
 
 export function ConnectCard() {
   return (
     <Card className="rounded-xl p-4 border-none transition-all duration-300 hover:scale-[1.02] bg-first-1 text-third-1 h-full shadow-lg">
-      <h2 className="font-bold mb-4 text-lg tracking-tight">Let&apos;s Connect</h2>
+      <h2 className="font-bold mb-4 text-lg tracking-tight">
+        Let&apos;s Connect
+      </h2>
       <div className="grid lg:grid-cols-2 sm:grid-cols-6 max-sm:grid-cols-3  gap-3">
         {socialLinks.map((link) => {
           const Icon = link.icon;
@@ -21,7 +22,19 @@ export function ConnectCard() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Icon className="w-8 h-8 bg-gray-900/50 p-1.5 hover:bg-second-1 text-third-1 rounded-lg transition-transform duration-200 group-hover:scale-110" />
+              {link.platform === "Leetcode" ? (
+                <div
+                 className="w-8 h-8 bg-gray-900/50 p-1.5 hover:bg-second-1 text-third-1 rounded-lg transition-transform duration-200 group-hover:scale-110">
+                  <Image
+                    src="/icons/leetcode.svg"
+                    alt="github icon"
+                    width={32}
+                    height={32}
+                  />
+                </div>
+              ) : (
+                <Icon className="w-8 h-8 bg-gray-900/50 p-1.5 hover:bg-second-1 text-third-1 rounded-lg transition-transform duration-200 group-hover:scale-110" />
+              )}
             </a>
           );
         })}
@@ -29,4 +42,3 @@ export function ConnectCard() {
     </Card>
   );
 }
-

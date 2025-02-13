@@ -9,6 +9,7 @@ import {
   Loader2,
   AlertCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 interface LeetCodeUserProfile {
   username: string;
@@ -105,7 +106,12 @@ export const LeetCodeCard = () => {
     <Card className="p-6 border-none rounded-2xl transition-all duration-300 bg-first-1 text-third-1 shadow-xl relative">
       {/* Logo in the top-right corner */}
       <div className="absolute bottom-4 right-4">
-        <Code className="w-6 h-6 " />
+        <Image
+          src="/icons/leetcode.svg"
+          alt="github icon"
+          width={24}
+          height={24}
+        />
       </div>
 
       <div className="flex flex-col gap-4">

@@ -130,7 +130,7 @@ export const LeetCodeCard = () => {
         {/* Rating */}
         <div className="p-4 rounded-lg bg-white">
           <h3 className="text-sm ">Rating</h3>
-          <p className="text-2xl font-bold">{stats.rating || "N/A"}</p>
+          <p className="text-2xl font-bold">{stats.rating.toFixed(3) || "N/A"}</p>
         </div>
       </div>
     </Card>
